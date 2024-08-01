@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
-function QuickLinks() {
+function QuickLinks({ scrollToSection }) {
   return (
     <div className='w-full h-[80vh] bg-[#1e1e22] flex flex-col justify-center items-center'>
       <div className='flex flex-col sm:flex-row justify-between max-w-screen-lg w-full px-4 sm:px-8 gap-20 sm:gap-40'>
@@ -57,22 +57,25 @@ function QuickLinks() {
             <a href="https://www.linkedin.com/in/faizansheikh5/" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-4xl -ml-[13vw]">
               <FaLinkedin />
             </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-4xl -ml-[13vw]">
+              <FaInstagram />
+            </a>
           </div>
         </div>
 
         {/* Right section with Quick Links and its additional text */}
-        <div className='flex flex-col items-center mt-1'>
+        <div className='flex flex-col items-center mt-2'>
           {/* Quick Links section */}
-          <div className="text-lg lg:text-3xl font-semibold text-white mb-6 -ml-[8vw]">Quick Links</div>
+          <div className="text-lg lg:text-3xl font-semibold text-white mb-6 -ml-[6vw]">Quick Links</div>
           {/* Links */}
-          <div className="text-gray-400 text-xl lg:text-2xl text-left -mr-10">
+          <div className="text-gray-500 text-xl lg:text-2xl text-left -mr-10">
             <ul className="list-disc pl-8">
-              <li><span>To Know Our Web Features</span></li>
-              <li><span>Mobile&nbsp;Application&nbsp;Development</span></li>
-              <li><span>SEO Optimization</span></li>
-              <li><span>DevOps Services</span></li>
-              <li><span>Enterprise Solutions</span></li>
-              <li><span>Contact</span></li>
+              <li><span onClick={() => scrollToSection('features')}>To Know Our Web Features</span></li>
+              <li><span onClick={() => scrollToSection('services')}>Our Solution and Services</span></li>
+              <li><span onClick={() => scrollToSection('about')}>About Us</span></li>
+              <li><span onClick={() => scrollToSection('technologies')}>Our Technologies</span></li>
+              <li><span onClick={() => scrollToSection('home')}>Welcome at DevCoders</span></li>
+              <li><span onClick={() => scrollToSection('contacts')}>Let's do working together</span></li>
             </ul>
           </div>
         </div>
