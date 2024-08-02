@@ -3,8 +3,8 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 function QuickLinks({ scrollToSection }) {
   return (
-    <div className='w-full h-[80vh] bg-[#1e1e22] flex flex-col justify-center items-center'>
-      <div className='flex flex-col sm:flex-row justify-between max-w-screen-lg w-full px-4 sm:px-8 gap-20 sm:gap-40'>
+    <div className='w-full h-[100vh] bg-[#1e1e22] flex flex-col justify-center items-center'>
+      <div className='flex flex-col mt-5 sm:flex-row justify-between max-w-screen-lg w-full px-4 sm:px-8 gap-20 sm:gap-40'>
         {/* Left section with DevCoders and its description */}
         <div className='flex flex-col items-center mb-8 sm:mb-0'>
           <div className='flex items-center mb-6 -ml-[15vw]'>
@@ -66,7 +66,7 @@ function QuickLinks({ scrollToSection }) {
         {/* Right section with Quick Links and its additional text */}
         <div className='flex flex-col items-center mt-2'>
           {/* Quick Links section */}
-          <div className="text-lg lg:text-3xl font-semibold text-white mb-6 -ml-[6vw]">Quick Links</div>
+          <div className="text-lg lg:text-3xl font-semibold text-white mb-6 -ml-[6vw] mb-2">Quick Links</div>
           {/* Links */}
           <div className="text-gray-500 text-xl lg:text-2xl text-left -mr-10">
             <ul className="list-disc pl-8">
