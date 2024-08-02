@@ -66,7 +66,7 @@ function QuickLinks({ scrollToSection }) {
         {/* Right section with Quick Links and its additional text */}
         <div className='flex flex-col items-center mt-2'>
           {/* Quick Links section */}
-          <div className="text-lg lg:text-3xl font-semibold text-white mb-6 -ml-[6vw] mb-2">Quick Links</div>
+          <div className="text-lg lg:text-3xl font-semibold text-white mb-4 -ml-[6vw]">Quick Links</div>
           {/* Links */}
           <div className="text-gray-500 text-xl lg:text-2xl text-left -mr-10">
             <ul className="list-disc pl-8">
