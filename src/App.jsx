@@ -11,6 +11,8 @@ import QuickLinks from './components/QuickLinks';
 import Footer from './components/Footer';
 import Map from './components/Map';
 import Quote from './components/Quote'; // Import the new component
+import ExploreServices from './pages/ExploreServices';
+import Introduction from './pages/Introduction';
 
 function App() {
   const homeRef = useRef(null);
@@ -60,7 +62,9 @@ function App() {
           <Map />
           <Footer />
         </>} />
-        <Route path="/quote" element={<Quote />} /> {/* Add the Quote route */}
+        <Route path="/quote" element={<Quote />} /> 
+        <Route path='/exploreservices' element={<ExploreServices/>}/>
+        <Route path='/introduction' element={<Introduction/>}/>
       </Routes>
     </Router>
   );

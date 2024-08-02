@@ -10,8 +10,10 @@ function Navbar({ scrollToSection }) {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Determine if we are on the "quote" page
+  // Determine if we are on the "quote", "exploreservices", or "introduction" page
   const isQuotePage = location.pathname === '/quote';
+  const isExploreServicesPage = location.pathname === '/exploreservices';
+  const isIntroductionPage = location.pathname === '/introduction';
 
   return (
     <div className='fixed z-[999] w-full px-6 py-4 lg:px-20 lg:py-8 font-["Neue Montreal"] bg-zinc-900 flex justify-between items-center'>
@@ -42,7 +44,7 @@ function Navbar({ scrollToSection }) {
         </svg>
         <span className="ml-4 text-lg lg:text-xl font-semibold text-[#61DAFB]">DevCoders</span>
       </Link>
-      {!isQuotePage && (
+      {!isQuotePage && !isExploreServicesPage && !isIntroductionPage && (
         <div className='hidden lg:flex items-center gap-10'>
           {["Home", "Features", "About", "Services", "Contacts"].map((item, index) => (
             <a
@@ -67,7 +69,7 @@ function Navbar({ scrollToSection }) {
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-      {isMobileMenuOpen && !isQuotePage && (
+      {isMobileMenuOpen && !isQuotePage && !isExploreServicesPage && !isIntroductionPage && (
         <div className='absolute top-16 left-0 w-full bg-[#282C34] flex flex-col items-center py-4 lg:hidden'>
           {["Home", "Features", "About", "Services", "Contacts"].map((item, index) => (
             <a

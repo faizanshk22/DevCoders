@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function LandingPage() {
   const lines = [
@@ -69,12 +70,16 @@ function LandingPage() {
           </motion.div>
         </AnimatePresence>
         <div className="button-container flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:ml-0">
+        <Link to="/introduction">
           <button className='ml-20 flex uppercase items-center justify-center gap-2 sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-full text-white hover:bg-blue-900 transition duration-300'>
             Get Started &gt;&gt;
           </button>
-          <button className='ml-20 flex uppercase items-center justify-center gap-2 sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-full text-white hover:bg-blue-900 transition duration-300'>
-            Explore Services &gt;&gt;
-          </button>
+          </Link>
+           <Link to="/exploreservices">
+      <button className='ml-20 flex uppercase items-center justify-center gap-2 sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-full text-white hover:bg-blue-900 transition duration-300'>
+        Explore Services &gt;&gt;
+      </button>
+    </Link>
         </div>
       </div>
       <div className="image-container flex justify-center items-center w-full lg:w-1/2 mt-10 lg:mt-0">
@@ -88,7 +93,7 @@ function LandingPage() {
             exit="hidden"
             variants={variants}
             transition={imageTransition}
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-lg"
           />
         </AnimatePresence>
       </div>
