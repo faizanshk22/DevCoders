@@ -1,10 +1,17 @@
-import React from 'react'
-import Footer from '../components/Footer'
+import React from 'react';
+import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
 
 function Introduction() {
   return (
     <>
-      <div className="w-full min-h-screen bg-[#1e1e22] flex flex-col items-center py-10">
+      <motion.div
+        className="w-full min-h-screen bg-[#1e1e22] flex flex-col items-center py-10 overflow-hidden"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ type: 'spring', stiffness: 50 }}
+        style={{ backgroundColor: '#1e1e22' }} // Ensure background color is set
+      >
         <span className="title text-[#61DAFB] text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-20 sm:mt-24 md:mt-32 lg:mt-30">
           ••• Get Started •••
         </span>
@@ -41,10 +48,10 @@ function Introduction() {
            <strong className="font-sans"> Ready to start your journey with us? Click the logo to get the Quote!</strong>
           </p>
         </div>
-      </div>
+      </motion.div>
       <Footer/>
     </>
-  )
+  );
 }
 
-export default Introduction
+export default Introduction;
