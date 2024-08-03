@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'react-feather';
 import { Link, useLocation } from 'react-router-dom';
 
 function Navbar({ scrollToSection }) {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024); // Detect mobile screen
   const location = useLocation(); // Get the current location
+
+  useEffect(() => {
+    // Update the isMobile state based on window width
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -14,6 +23,9 @@ function Navbar({ scrollToSection }) {
   const isQuotePage = location.pathname === '/quote';
   const isExploreServicesPage = location.pathname === '/exploreservices';
   const isIntroductionPage = location.pathname === '/introduction';
+
+  // Determine if the mobile menu should be hidden
+  const shouldHideMobileMenu = isQuotePage || isExploreServicesPage || isIntroductionPage;
 
   return (
     <div className='fixed z-[999] w-full px-6 py-4 lg:px-20 lg:py-8 font-["Neue Montreal"] bg-zinc-900 flex justify-between items-center'>
@@ -44,7 +56,7 @@ function Navbar({ scrollToSection }) {
         </svg>
         <span className="ml-4 text-lg lg:text-xl font-semibold text-[#61DAFB]">DevCoders</span>
       </Link>
-      {!isQuotePage && !isExploreServicesPage && !isIntroductionPage && (
+      {!shouldHideMobileMenu && !isMobile && (
         <div className='hidden lg:flex items-center gap-10'>
           {["Home", "Features", "About", "Services", "Contacts"].map((item, index) => (
             <a
@@ -64,12 +76,14 @@ function Navbar({ scrollToSection }) {
           </Link>
         </div>
       )}
-      <div className='lg:hidden'>
-        <button onClick={toggleMobileMenu} className='text-white'>
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-      {isMobileMenuOpen && !isQuotePage && !isExploreServicesPage && !isIntroductionPage && (
+      {!shouldHideMobileMenu && (
+        <div className='lg:hidden'>
+          <button onClick={toggleMobileMenu} className='text-white'>
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      )}
+      {isMobileMenuOpen && !shouldHideMobileMenu && (
         <div className='absolute top-16 left-0 w-full bg-[#282C34] flex flex-col items-center py-4 lg:hidden'>
           {["Home", "Features", "About", "Services", "Contacts"].map((item, index) => (
             <a
