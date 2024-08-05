@@ -3,11 +3,11 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 function QuickLinks({ scrollToSection }) {
   return (
-    <div className='w-full h-[100vh] bg-[#1e1e22] flex flex-col justify-center items-center'>
-      <div className='flex flex-col mt-5 sm:flex-row justify-between max-w-screen-lg w-full px-4 sm:px-8 gap-20 sm:gap-40'>
+    <div className='w-full h-screen bg-[#1e1e22] flex flex-col justify-center items-center'>
+      <div className='flex flex-col sm:flex-row justify-between items-center max-w-screen-lg w-full px-4 sm:px-8 gap-8 sm:gap-12'>
         {/* Left section with DevCoders and its description */}
-        <div className='flex flex-col items-center mb-8 sm:mb-0'>
-          <div className='flex items-center mb-6 -ml-[15vw]'>
+        <div className='flex flex-col items-center text-center sm:text-left'>
+          <div className='flex items-center justify-center mb-6 -ml-[16vw]'>
             {/* Logo */}
             <svg
               width="48"
@@ -35,41 +35,41 @@ function QuickLinks({ scrollToSection }) {
               <circle cx="50" cy="70" r="5" fill="#61DAFB" />
             </svg>
             {/* DevCoders text */}
-            <div className="text-lg lg:text-3xl font-semibold text-[#61DAFB]">DevCoders</div>
+            <div className="text-lg sm:text-3xl font-semibold text-[#61DAFB]">DevCoders</div>
           </div>
           {/* DevCoders description */}
-          <div className="text-gray-400 text-xl lg:text-2xl text-left" style={{ whiteSpace: 'nowrap' }}>
-            DevCoders offers customized IT solutions<br/>
+          <div className="text-gray-400 text-left text-sm sm:text-xl lg:text-2xl">
+            <p>DevCoders offers customized IT solutions<br/>
             designed to suit your specific requirements.<br/>
             Our team of experienced professionals blends<br/>
             technical expertise with innovative thinking<br/>
             to achieve outstanding outcomes.<br/>
             We enable businesses across various industries<br/>
             to excel in today’s digital world.<br/>
-            Explore our services to see how
-            we can elevate <br/>your organization to new heights.
+            Explore our services to see how we can elevate <br/>
+            your organization to new heights.</p>
           </div>
           {/* Social Media Icons */}
-          <div className='flex mt-8 space-x-6'>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-4xl -ml-[13vw]">
+          <div className='flex mt-8 -ml-[18vw] space-x-6'>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
               <FaFacebook />
             </a>
-            <a href="https://www.linkedin.com/in/faizansheikh5/" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-4xl -ml-[13vw]">
+            <a href="https://www.linkedin.com/in/faizansheikh5/" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
               <FaLinkedin />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-4xl -ml-[13vw]">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
               <FaInstagram />
             </a>
           </div>
         </div>
 
         {/* Right section with Quick Links and its additional text */}
-        <div className='flex flex-col items-center mt-2'>
+        <div className='flex flex-col items-center mt-8 sm:mt-0 text-left sm:text-left'>
           {/* Quick Links section */}
-          <div className="text-lg lg:text-3xl font-semibold text-white mb-4 -ml-[6vw]">Quick Links</div>
+          <div className="text-lg sm:text-3xl font-semibold text-white mb-4 -ml-[6vw]">Quick Links</div>
           {/* Links */}
-          <div className="text-gray-500 text-xl lg:text-2xl text-left -mr-10">
-            <ul className="list-disc pl-8">
+          <div className="text-gray-500 text-sm sm:text-xl lg:text-2xl">
+            <ul className="list-disc pl-6 sm:pl-8">
               <li><span onClick={() => scrollToSection('features')}>To Know Our Web Features</span></li>
               <li><span onClick={() => scrollToSection('services')}>Our Solution and Services</span></li>
               <li><span onClick={() => scrollToSection('about')}>About Us</span></li>
