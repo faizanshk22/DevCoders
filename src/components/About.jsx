@@ -83,7 +83,7 @@ function About() {
 
           {/* Section 1 */}
           <div className='mt-6 flex items-start'>
-            <div className='relative mt-3 mr-2 flex-none'>
+            <div className='relative mt-2.5 mr-2 flex-none'>
               <div className='absolute left-[-10px] -mt-1 w-6 h-6 bg-transparent border-2 border-[#61DAFB] rounded-full'></div>
               <FaCircle className='text-[#61DAFB]' />
             </div>
@@ -99,7 +99,7 @@ function About() {
 
           {/* Section 2 */}
           <div className='mt-6 flex items-start'>
-            <div className='relative mt-3 mr-2 flex-none'>
+            <div className='relative mt-2.5 mr-2 flex-none'>
               <div className='absolute left-[-10px] -mt-1 w-6 h-6 bg-transparent border-2 border-[#61DAFB] rounded-full'></div>
               <FaCircle className='text-[#61DAFB]' />
             </div>
@@ -114,7 +114,7 @@ function About() {
 
           {/* Section 3 */}
           <div className='mt-6 flex items-start'>
-            <div className='relative mt-3 mr-2 flex-none'>
+            <div className='relative mt-2.5 mr-2 flex-none'>
               <div className='absolute left-[-10px] -mt-1 w-6 h-6 bg-transparent border-2 border-[#61DAFB] rounded-full'></div>
               <FaCircle className='text-[#61DAFB]' />
             </div>

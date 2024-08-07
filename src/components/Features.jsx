@@ -40,7 +40,7 @@ function Features() {
 const FeatureItem = ({ icon, text }) => {
   return (
     <motion.div 
-      className='flex flex-col items-center bg-[#1e1e22] p-4 rounded-lg hover:bg-gray-900 mr-10 transition duration-300'
+      className='flex flex-col items-center bg-[#1e1e22] p-4 m-2 rounded-lg hover:bg-gray-900 mr-30 transition duration-300'
       variants={bounce}
       initial='hidden'
       animate='visible'

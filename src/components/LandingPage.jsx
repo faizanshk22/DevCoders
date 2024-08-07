@@ -22,7 +22,7 @@ function LandingPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(prevIndex => (prevIndex === lines.length - 1 ? 0 : prevIndex + 1));
-    }, 3000);
+    }, 4000); // Increased time for a smoother transition
 
     return () => clearInterval(interval);
   }, []);
@@ -34,17 +34,17 @@ function LandingPage() {
   };
 
   const imageVariants = {
-    enter: { opacity: 0, scale: 0.9 },
+    enter: { opacity: 0, scale: 0.95 },
     center: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, scale: 1.1 },
+    exit: { opacity: 0, scale: 1.05 },
   };
 
-  const textTransition = { duration: 0.8, ease: 'easeInOut' };
-  const imageTransition = { duration: 0.8, ease: 'easeInOut' };
+  const textTransition = { duration: 1, ease: 'easeInOut' }; // Slightly longer duration
+  const imageTransition = { duration: 1, ease: 'easeInOut' }; // Slightly longer duration
 
   return (
     <div className='relative w-full h-screen bg-[#1e1e22] flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 lg:px-20'>
-      <div className="text-container flex flex-col items-center lg:items-start w-full lg:w-1/2 text-center lg:text-left">
+      <div className="text-container flex flex-col items-center lg:items-start w-full lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -76,7 +76,7 @@ function LandingPage() {
             )}
           </motion.div>
         </AnimatePresence>
-        <div className="button-container flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="button-container flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-4 lg:mb-0">
           <Link to="/introduction">
             <button className='flex uppercase items-center justify-center gap-2 sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-full text-white hover:bg-blue-900 transition duration-300'>
               Get Started &gt;&gt;
