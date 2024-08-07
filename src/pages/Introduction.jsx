@@ -5,8 +5,10 @@ import Footer from '../components/Footer';
 function Introduction() {
   return (
     <>
+    <div className='about-intro w-full min-h-screen bg-[#1e1e22] py-10 overflow-hidden'>
       <motion.div
-        className="w-full min-h-screen bg-[#1e1e22] flex flex-col items-center py-10 overflow-hidden"
+      className='flex flex-col items-center '
+        // className="w-full min-h-screen bg-[#1e1e22] flex flex-col items-center py-10 overflow-hidden"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 50 }}
@@ -49,7 +51,8 @@ function Introduction() {
           </p>
         </div>
       </motion.div>
-      <Footer/>
+    </div>
+    <Footer/>
     </>
   );
 }

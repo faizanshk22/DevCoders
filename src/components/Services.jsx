@@ -51,7 +51,7 @@ function Services() {
       >
         Our Expertise
       </motion.span>
-      <div className='sm:mt-10 flex flex-wrap justify-center gap-5 sm:gap-10 p-4 rounded-lg hover:bg-blue-900 transition duration-300'>
+      <div className='sm:mt-10 flex flex-wrap justify-center gap-5 sm:gap-10 p-4 rounded-lg transition duration-300'>
         <ServiceCard controls={controls} icon="/icons/programming.png" alt="Programming" title="Web Application Development" />
         <ServiceCard controls={controls} icon="/icons/app-settings.png" alt="App Settings" title="Mobile Application Developments" />
         <ServiceCard controls={controls} icon="/icons/seo.png" alt="SEO" title="Search Engine Optimization" />

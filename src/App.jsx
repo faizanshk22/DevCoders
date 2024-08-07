@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
@@ -13,6 +13,7 @@ import Map from './components/Map';
 import Quote from './components/Quote'; // Import the new component
 import ExploreServices from './pages/ExploreServices';
 import Introduction from './pages/Introduction';
+import Loader from './components/Loader';
 
 function App() {
   const homeRef = useRef(null);
@@ -46,7 +47,18 @@ function App() {
         break;
     }
   };
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the timeout duration as needed
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <Router>
       <Navbar scrollToSection={scrollToSection} />

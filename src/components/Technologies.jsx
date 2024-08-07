@@ -6,7 +6,7 @@ function Technologies() {
     initial: { scale: 1, rotate: 0 },
     hover: { scale: 1.25, rotate: 10 },
     pulse: {
-      scale: [1.3, 1.1, 1],
+      scale: [1.5, 1.1, 1],
       transition: {
         duration: 1.5,
         repeat: Infinity,

@@ -11,7 +11,7 @@ const bounce = {
   visible: { 
     scale: [1, 1.2, 1], 
     transition: { 
-      duration: 0.6, 
+      duration: 1, 
       ease: 'easeOut', 
       repeat: Infinity,
       repeatType: 'loop'
@@ -40,7 +40,7 @@ function Features() {
 const FeatureItem = ({ icon, text }) => {
   return (
     <motion.div 
-      className='flex flex-col items-center bg-[#1e1e22] p-4 rounded-lg hover:bg-blue-900 transition duration-300'
+      className='flex flex-col items-center bg-[#1e1e22] p-4 rounded-lg hover:bg-gray-900 mr-10 transition duration-300'
       variants={bounce}
       initial='hidden'
       animate='visible'

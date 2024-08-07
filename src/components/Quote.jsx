@@ -1,5 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+
 
 function Contact() {
   const form = useRef();
@@ -39,9 +41,11 @@ function Contact() {
 
   return (
     <>
-      <div className='w-full min-h-[100vh] bg-[#2a2a2e] flex flex-col lg:flex-row justify-between px-6 lg:px-20'>
+      <div className='w-full min-h-[100vh] bg-[#2a2a2e] flex flex-col lg:flex-row justify-between py-20'>
         {/* Left Side */}
-        <div className='flex flex-col justify-center items-start p-6 lg:ml-20 w-full lg:w-1/2'>
+        <motion.div  initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ type: 'spring', stiffness: 50 }} className='flex flex-col justify-center items-start p-6 lg:ml-20 w-full lg:w-1/2'>
           <div className='mb-10'>
             <span className='title text-[#61DAFB] text-2xl'> ••• Let's do work together ••• </span>
             <p className='text-white mt-10 text-xl sm:text-2xl md:text-4xl lg:text-6xl font-["Founders_Grotesk_X-Condensed"]'>
@@ -68,10 +72,12 @@ function Contact() {
             </div>
             <p className="text-white text-sm lg:text-base">+92 3244282516</p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Side */}
-        <div className='flex flex-col justify-center items-center mt-2 p-6 lg:mr-20 w-full lg:w-1/2'>
+        <motion.div  initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ type: 'spring', stiffness: 50 }} className='flex flex-col justify-center items-center mt-2 p-6 lg:mr-20 w-full lg:w-1/2'>
           <form ref={form} onSubmit={sendEmail} className='bg-white p-6 rounded-lg w-full'>
             <label className='block mb-2'>Name</label>
             <input type="text" name="from_name" className='border border-gray-300 p-2 mb-4 w-full' />
@@ -88,7 +94,7 @@ function Contact() {
               {status}
             </div>
           )}
-        </div>
+        </motion.div>
       </div>
       
       {/* Map Section */}
