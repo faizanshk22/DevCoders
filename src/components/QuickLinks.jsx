@@ -1,10 +1,45 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { motion, useAnimation } from 'framer-motion';
+
+const slideIn = {
+  hidden: { opacity: 0, y: -100 },  // Move from bottom to top
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }, // Animate to final position
+};
 
 function QuickLinks({ scrollToSection }) {
+  const controls = useAnimation();
+  const quickLinksRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (quickLinksRef.current) {
+        const rect = quickLinksRef.current.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isVisible) {
+          controls.start('visible');
+        } else {
+          controls.start('hidden');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check visibility on mount
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [controls]);
+
   return (
     <div className='w-full h-screen bg-[#1e1e22] flex flex-col justify-center items-center'>
-      <div className='flex flex-col sm:flex-row justify-between items-center max-w-screen-lg w-full px-4 sm:px-8 gap-8 sm:gap-12'>
+      <motion.div 
+          ref={quickLinksRef}
+          variants={slideIn} 
+          initial='hidden' 
+          animate={controls} 
+          className='flex flex-col sm:flex-row justify-between items-center max-w-screen-lg w-full px-4 sm:px-8 gap-8 sm:gap-12'>
         {/* Left section with DevCoders and its description */}
         <div className='flex flex-col items-center text-center sm:text-left'>
           <div className='flex items-center justify-center mb-6 -ml-[16vw]'>
@@ -79,7 +114,7 @@ function QuickLinks({ scrollToSection }) {
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

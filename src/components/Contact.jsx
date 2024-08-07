@@ -1,9 +1,35 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
 function Contact() {
   const form = useRef();
   const [status, setStatus] = useState('');
+  const controls = useAnimation();
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          controls.start('visible');
+        } else {
+          controls.start('hidden');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+
+    return () => {
+      if (contactRef.current) {
+        observer.unobserve(contactRef.current);
+      }
+    };
+  }, [controls]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -13,15 +39,16 @@ function Contact() {
         'service_d8z7w8c',
         'template_w56gpso',
         form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY // Use Vite's environment variable here
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
           setStatus('SUCCESS! Your message has been sent.');
-          form.current.reset(); // Clear the form fields
+          form.current.reset();
         },
         (error) => {
-          setStatus(`FAILED: ${error.text}`);
+          console.error('EmailJS error:', error);
+          setStatus(`FAILED: ${error.text || 'An error occurred'}`);
         }
       );
   };
@@ -31,47 +58,61 @@ function Contact() {
       const timer = setTimeout(() => {
         setStatus('');
       }, 3000);
-
-      // Cleanup timeout if status changes before 3 seconds
       return () => clearTimeout(timer);
     }
   }, [status]);
 
+  const slideIn = {
+    hidden: { opacity: 0, y: 100 }, // Start 100px to the bottom
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }, // Animate to the original position
+  };
+
   return (
-    <div className='w-full min-h-screen bg-[#2a2a2e] flex flex-col lg:flex-row justify-between px-6 lg:px-20'>
+    <div ref={contactRef} className='w-full min-h-screen bg-[#2a2a2e] flex flex-col lg:flex-row justify-between px-6 lg:px-20 py-8'>
       {/* Left Side */}
-      <div className='flex flex-col justify-center items-start p-6 lg:ml-20'>
+      <motion.div 
+        initial='hidden' 
+        animate={controls} 
+        variants={slideIn} 
+        className='flex flex-col justify-center items-start lg:ml-20 mb-8 lg:mb-0 w-full lg:w-1/2'
+      >
         <div className='mb-10'>
           <span className='title text-[#61DAFB] text-2xl'> ••• Contact Us ••• </span>
-          <p className='text-white mt-10 text-xl sm:text-2xl md:text-4xl lg:text-6xl font-["Founders_Grotesk_X-Condensed"]'>
-            Got a project in mind? Don't hesitate to reach out to us!</p>
+          <p className='text-white mt-10 text-lg sm:text-xl md:text-2xl lg:text-4xl font-["Founders_Grotesk_X-Condensed"]'>
+            Got a project in mind? Don't hesitate to reach out to us!
+          </p>
         </div>
-        <div className='border border-gray-300 p-4 mb-4'>
+        <div className='border border-gray-300 p-4 mb-4 w-full'>
           <div className='flex items-center mb-2'>
             <img width="48" height="48" src="https://img.icons8.com/color/48/marker--v1.png" alt="marker--v1"/>
-            <p className="text-blue-500 text-xl lg:text-2xl">Location</p>
+            <p className="text-blue-500 text-lg lg:text-xl ml-4">Location</p>
           </div>
           <p className="text-white text-sm lg:text-base">3rd Floor, Dubai Tower, Shalimar Link Road. Lahore</p>
         </div>
-        <div className='border border-gray-300 p-4 mb-4'>
+        <div className='border border-gray-300 p-4 mb-4 w-full'>
           <div className='flex items-center mb-2'>
             <img width="48" height="48" src="https://img.icons8.com/color/48/new-post.png" alt="new-post"/>
-            <p className="text-blue-500 text-xl lg:text-2xl">Email</p>
+            <p className="text-blue-500 text-lg lg:text-xl ml-4">Email</p>
           </div>
           <p className="text-white text-sm lg:text-base">devcoders@gmail.com</p>
         </div>
-        <div className='border border-gray-300 p-4 mb-4'>
+        <div className='border border-gray-300 p-4 mb-4 w-full'>
           <div className='flex items-center mb-2'>
             <img width="48" height="48" src="https://img.icons8.com/color/48/phone.png" alt="phone"/>
-            <p className="text-blue-500 text-xl lg:text-2xl">Phone</p>
+            <p className="text-blue-500 text-lg lg:text-xl ml-4">Phone</p>
           </div>
           <p className="text-white text-sm lg:text-base">+92 3244282516</p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Right Side */}
-      <div className='flex justify-center items-center mt-2 p-6 lg:mr-20 w-full lg:w-auto'>
-        <form ref={form} onSubmit={sendEmail} className='bg-white p-6 rounded-lg w-full'>
+      <motion.div 
+        initial='hidden' 
+        animate={controls} 
+        variants={slideIn} 
+        className='flex justify-center items-center w-full lg:w-1/2'
+      >
+        <form ref={form} onSubmit={sendEmail} className='bg-white p-6 rounded-lg w-full max-w-lg mx-auto'>
           <label className='block mb-2'>Name</label>
           <input type="text" name="from_name" className='border border-gray-300 p-2 mb-4 w-full' />
           <label className='block mb-2'>Email</label>
@@ -80,7 +121,7 @@ function Contact() {
           <textarea name="message" className='border border-gray-300 p-2 mb-4 w-full'></textarea>
           <input type="submit" value="Send" className='bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer w-full' />
         </form>
-      </div>
+      </motion.div>
 
       {/* Status Message */}
       {status && (

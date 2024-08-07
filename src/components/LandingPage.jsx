@@ -27,13 +27,20 @@ function LandingPage() {
     return () => clearInterval(interval);
   }, []);
 
-  const variants = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 }
+  const textVariants = {
+    enter: { opacity: 0, y: 20 },
+    center: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
   };
 
-  const textTransition = { duration: 0.5 };
-  const imageTransition = { ease: [0.76, 0, 0.24, 1], duration: 1 };
+  const imageVariants = {
+    enter: { opacity: 0, scale: 0.9 },
+    center: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 1.1 },
+  };
+
+  const textTransition = { duration: 0.8, ease: 'easeInOut' };
+  const imageTransition = { duration: 0.8, ease: 'easeInOut' };
 
   return (
     <div className='relative w-full h-screen bg-[#1e1e22] flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 lg:px-20'>
@@ -41,10 +48,10 @@ function LandingPage() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            variants={textVariants}
             transition={textTransition}
             className="text-xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-6 lg:mb-10"
           >
@@ -85,13 +92,13 @@ function LandingPage() {
       <div className="image-container flex justify-center items-center w-full lg:w-1/2 mt-10 lg:mt-0">
         <AnimatePresence mode="wait">
           <motion.img
-            key={activeIndex} 
-            src={images[activeIndex % images.length]} 
+            key={activeIndex}
+            src={images[activeIndex % images.length]}
             alt="Dynamic"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            variants={imageVariants}
             transition={imageTransition}
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-lg"
           />
