@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const slideIn = {
   hidden: { opacity: 0, x: -100 },
@@ -52,11 +53,21 @@ function Services() {
         Our Expertise
       </motion.span>
       <div className='sm:mt-10 flex flex-wrap justify-center gap-5 sm:gap-10 p-4 rounded-lg transition duration-300'>
-        <ServiceCard controls={controls} icon="/icons/programming.png" alt="Programming" title="Web Application Development" />
-        <ServiceCard controls={controls} icon="/icons/app-settings.png" alt="App Settings" title="Mobile Application Developments" />
-        <ServiceCard controls={controls} icon="/icons/seo.png" alt="SEO" title="Search Engine Optimization" />
-        <ServiceCard controls={controls} icon="/icons/infinity.png" alt="Infinity" title="DevOps Engineering" />
-        <ServiceCard controls={controls} icon="/icons/office.png" alt="Office" title="Custom Enterprise Solutions" />
+        <Link to="/Web">
+          <ServiceCard controls={controls} icon="/icons/programming.png" alt="Programming" title="Web Application Development" />
+        </Link>
+        <Link to="/Mobile">
+          <ServiceCard controls={controls} icon="/icons/app-settings.png" alt="App Settings" title="Mobile Application Developments" />
+        </Link>
+        <Link to="/Seo">
+          <ServiceCard controls={controls} icon="/icons/seo.png" alt="SEO" title="Search Engine Optimization" />
+        </Link>
+        <Link to="/DevOps">
+          <ServiceCard controls={controls} icon="/icons/infinity.png" alt="Infinity" title="DevOps Engineering" />
+        </Link>
+        <Link to="/CustomSolutions">
+          <ServiceCard controls={controls} icon="/icons/office.png" alt="Office" title="Custom Enterprise Solutions" />
+        </Link>
       </div>
     </div>
   );

@@ -15,6 +15,11 @@ import ExploreServices from './pages/ExploreServices';
 import Introduction from './pages/Introduction';
 import Loader from './components/Loader';
 import Testimonail from './components/Testimonail';
+import Web from './components/LinkPages/Web';
+import Mobile from './components/LinkPages/Mobile';
+import Seo from './components/LinkPages/Seo';
+import DevOps from './components/LinkPages/DevOps';
+import CustomSolution from './components/LinkPages/CustomSolution';
 
 function App() {
   const homeRef = useRef(null);
@@ -79,6 +84,12 @@ function App() {
         <Route path="/quote" element={<Quote />} /> 
         <Route path='/exploreservices' element={<ExploreServices/>}/>
         <Route path='/introduction' element={<Introduction/>}/>
+        <Route path="/" element={<Services />} />
+        <Route path="/Web" element={<Web />} />
+        <Route path="/Mobile" element={<Mobile />} />
+        <Route path="/Seo" element={<Seo />} />
+        <Route path="/DevOps" element={<DevOps />} />
+        <Route path="/CustomSolutions" element={<CustomSolution />} />
       </Routes>
     </Router>
   );

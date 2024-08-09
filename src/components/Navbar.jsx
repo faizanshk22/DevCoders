@@ -19,13 +19,20 @@ function Navbar({ scrollToSection }) {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Determine if we are on the "quote", "exploreservices", or "introduction" page
-  const isQuotePage = location.pathname === '/quote';
-  const isExploreServicesPage = location.pathname === '/exploreservices';
-  const isIntroductionPage = location.pathname === '/introduction';
+  // Debug: log the current pathname
+  console.log('Current Pathname:', location.pathname);
 
-  // Determine if the mobile menu should be hidden
-  const shouldHideMobileMenu = isQuotePage || isExploreServicesPage || isIntroductionPage;
+  // Determine if we are on the relevant page
+  const shouldHideMobileMenu = [
+    '/quote',
+    '/exploreservices',
+    '/introduction',
+    '/Web',
+    '/Mobile',
+    '/Seo',
+    '/DevOps',
+    '/CustomSolution',
+  ].includes(location.pathname);
 
   return (
     <div className='fixed z-[999] w-full px-6 py-4 lg:px-20 lg:py-8 font-["Neue Montreal"] bg-zinc-900 flex justify-between items-center'>
