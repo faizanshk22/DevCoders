@@ -14,6 +14,7 @@ import Quote from './components/Quote'; // Import the new component
 import ExploreServices from './pages/ExploreServices';
 import Introduction from './pages/Introduction';
 import Loader from './components/Loader';
+import Testimonail from './components/Testimonail';
 
 function App() {
   const homeRef = useRef(null);
@@ -70,6 +71,7 @@ function App() {
           <div ref={technologiesRef}><Technologies /></div>
           <div ref={servicesRef}><Services /></div>
           <div ref={contactsRef}><Contact /></div>
+          <Testimonail/>
           <QuickLinks scrollToSection={scrollToSection} />
           <Map />
           <Footer />
