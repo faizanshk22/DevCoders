@@ -33,9 +33,9 @@ function Navbar({ scrollToSection }) {
     '/DevOps',
     '/CustomSolution',
   ].includes(location.pathname);
-
+//bg-zinc-900
   return (
-    <div className='fixed z-[999] w-full px-6 py-4 lg:px-20 lg:py-8 font-["DM"] font-bold bg-zinc-900 flex justify-between items-center'>
+    <div className='fixed z-[999] w-full px-6 py-4 lg:px-20 lg:py-8 font-["DM"] font-bold bg-[#000] flex justify-between items-center'>
       <Link to="/" className='flex items-center'>
         <svg
           width="40"
@@ -61,7 +61,7 @@ function Navbar({ scrollToSection }) {
           />
           <circle cx="50" cy="70" r="5" fill="#61DAFB" />
         </svg>
-        <span className="ml-4 text-lg lg:text-xl font-semibold text-[#61DAFB]">DevCoders</span>
+        <span className="ml-4 text-lg lg:text-xl font-['Neue_Montreal'] font-semibold text-[#61DAFB]">DevCoders</span>
       </Link>
       {!shouldHideMobileMenu && !isMobile && (
         <div className='hidden lg:flex items-center gap-10'>

@@ -41,7 +41,7 @@ function About() {
   return (
     <div
       ref={ref}
-      className='w-full min-h-screen bg-[#1e1e22] flex flex-col items-center px-4 md:px-10 py-10'
+      className='w-full min-h-screen bg-[#000] flex flex-col items-center px-4 md:px-10 py-10'
     >
       {/* Animated title */}
       <motion.span

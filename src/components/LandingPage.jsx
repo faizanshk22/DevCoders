@@ -6,7 +6,7 @@ function LandingPage() {
   const lines = [
     "Web Development Solutions & IT Services",
     "Mobile Development Solutions and Services",
-    "Search Engine Optimization for better experience of your business",
+    "SEO for better experience of your business",
     "DevOps Engineering and Services"
   ];
 
@@ -42,11 +42,11 @@ function LandingPage() {
             exit="exit"
             variants={textVariants}
             transition={textTransition}
-            className="text-3xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
+            className="text-2xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
           >
-            {lines[activeIndex] === "Search Engine Optimization for better experience of your business" ? (
+            {lines[activeIndex] === "SEO for better experience of your business" ? (
               <>
-                Search Engine Optimization <br /> for better experience of your business
+                SEO for better experience <br /> of your business
               </>
             ) : lines[activeIndex] === "Web Development Solutions & IT Services" ? (
               <>
@@ -94,7 +94,7 @@ export default LandingPage;
 //   const lines = [
 //     "Web Development Solutions & IT Services",
 //     "Mobile Development Solutions and Services",
-//     "Search Engine Optimization for better experience of your business",
+//     "SEO for better experience of your business",
 //     "DevOps Engineering and Services"
 //   ];
 
@@ -143,9 +143,9 @@ export default LandingPage;
 //             transition={textTransition}
 //             className="text-xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-6 lg:mb-10"
 //           >
-//             {lines[activeIndex] === "Search Engine Optimization for better experience of your business" ? (
+//             {lines[activeIndex] === "SEO for better experience of your business" ? (
 //               <>
-//                 Search Engine Optimization <br /> for better experience of your business
+//                 SEO <br /> for better experience of your business
 //               </>
 //             ) : lines[activeIndex] === "Web Development Solutions & IT Services" ? (
 //               <>

@@ -35,7 +35,7 @@ function Services() {
   }, [controls]);
 
   return (
-    <div ref={servicesRef} className='w-full h-full bg-[#1e1e22] flex flex-col items-center justify-center'>
+    <div ref={servicesRef} className='w-full h-full bg-[#000] flex flex-col items-center justify-center'>
       <motion.span
         variants={slideIn}
         initial='hidden'

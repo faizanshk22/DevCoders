@@ -31,9 +31,9 @@ function QuickLinks({ scrollToSection }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [controls]);
-
+//bg-[#1e1e22]
   return (
-    <div className='w-full h-screen bg-[#1e1e22] flex flex-col justify-center items-center'>
+    <div className='w-full h-screen bg-[#000]  flex flex-col justify-center items-center'>
       <motion.div 
           ref={quickLinksRef}
           variants={slideIn} 
