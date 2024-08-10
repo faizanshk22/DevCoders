@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Stats from './Stats';
 
 function LandingPage() {
   const lines = [
@@ -33,7 +34,7 @@ function LandingPage() {
       className='relative w-full h-screen bg-cover bg-center sm:bg-top bg-[#1e1e22] flex flex-col items-center justify-center px-4 custom-bg-position'
       style={{ backgroundImage: "url('/images/B.jpg')" }}
     >
-      <div className="text-container flex flex-col items-center text-center w-full">
+      <div className="text-container flex flex-col items-center text-center w-full mt-[8vh]">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -67,17 +68,18 @@ function LandingPage() {
         </AnimatePresence>
         <div className="button-container flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <Link to="/introduction">
-            <button className='flex uppercase items-center justify-center gap-2 font-bold sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-full text-white hover:bg-blue-900 transition duration-300'>
+            <button className='flex uppercase items-center justify-center gap-2 font-bold sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-lg text-white hover:bg-blue-900 transition duration-300'>
               Get Started &gt;&gt;
             </button>
           </Link>
           <Link to="/exploreservices">
-            <button className='flex uppercase items-center justify-center gap-2 font-bold sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-full text-white hover:bg-blue-900 transition duration-300'>
+            <button className='flex uppercase items-center justify-center gap-2 font-bold sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-lg text-white hover:bg-blue-900 transition duration-300'>
               Explore Services &gt;&gt;
             </button>
           </Link>
         </div>
       </div>
+      <Stats />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Stats from './Stats';
+// import Stats from './Stats';
 
 function Technologies() {
   const iconVariants = {
@@ -17,7 +17,7 @@ function Technologies() {
   };
 
   return (
-    <div className='w-full min-h-screen bg-[#2a2a2e] flex flex-col items-center px-4 md:px-10'>
+    <div className='w-full h-full bg-[#2a2a2e] flex flex-col items-center px-4 md:px-10'>
       <span className='title text-[#61DAFB] text-2xl mt-20'> ••• Technologies We Use ••• </span>
       <div className='container flex flex-col items-center mt-[10vh] mb-[10vh]'>
         <div className="icon-container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10  p-4 rounded-md">
@@ -122,7 +122,7 @@ function Technologies() {
           />
         </div>
       </div>
-      <Stats />
+      {/* <Stats /> */}
     </div>
   );
 }

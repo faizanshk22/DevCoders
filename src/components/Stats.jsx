@@ -15,7 +15,7 @@ const stats = [
         text: "Technologies mastered",
     },
     {
-        num: 1500,
+        num: 500,
         text: "Code Commits",
     },
 ];
@@ -28,11 +28,11 @@ function Stats() {
     }, []);
 
     return (
-        <div className='container ml-4 -mt-2 pt-2 xl:pt-0 pb-2 xl:pb-0'>
+        <div className='container ml-4 mt-[10vh] pt-2 xl:pt-0 pb-2 xl:pb-0'>
             <div className='flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none'>
                 {stats.map((item, index) => (
                     <div 
-                        className='flex-1 flex gap-4 items-center justify-center xl:justify-start bg-gray-800 rounded-full p-4 md:p-6 shadow-lg w-full sm:w-auto' 
+                        className='flex-1 flex gap-4 items-center justify-center xl:justify-start bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full p-4 md:p-6 shadow-lg w-full sm:w-auto' 
                         key={index}
                     >
                         {startAnimation && (
