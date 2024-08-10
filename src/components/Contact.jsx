@@ -78,7 +78,7 @@ function Contact() {
       >
         <div className='mb-10'>
           <span className='title text-[#61DAFB] text-2xl'> ••• Contact Us ••• </span>
-          <p className='text-white mt-10 text-lg sm:text-xl md:text-2xl lg:text-4xl font-["Founders_Grotesk_X-Condensed"]'>
+          <p className='text-white mt-10 text-lg sm:text-xl md:text-2xl lg:text-4xl font-["DM_sans"]'>
             Got a project in mind? Don't hesitate to reach out to us!
           </p>
         </div>

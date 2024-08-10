@@ -70,7 +70,7 @@ function QuickLinks({ scrollToSection }) {
               <circle cx="50" cy="70" r="5" fill="#61DAFB" />
             </svg>
             {/* DevCoders text */}
-            <div className="text-lg sm:text-3xl font-semibold text-[#61DAFB]">DevCoders</div>
+            <div className="text-lg sm:text-3xl font-semibold font-['DM_sans'] text-[#61DAFB]">DevCoders</div>
           </div>
           {/* DevCoders description */}
           <div className="text-gray-400 text-left text-sm sm:text-xl lg:text-2xl">
@@ -101,7 +101,7 @@ function QuickLinks({ scrollToSection }) {
         {/* Right section with Quick Links and its additional text */}
         <div className='flex flex-col items-center mt-8 sm:mt-0 text-left sm:text-left'>
           {/* Quick Links section */}
-          <div className="text-lg sm:text-3xl font-semibold text-white mb-4 -ml-[6vw]">Quick Links</div>
+          <div className="text-lg sm:text-3xl font-semibold font-['DM_sans'] text-white mb-4 -ml-[6vw]">Quick Links</div>
           {/* Links */}
           <div className="text-gray-500 text-sm sm:text-xl lg:text-2xl">
             <ul className="list-disc pl-6 sm:pl-8">
