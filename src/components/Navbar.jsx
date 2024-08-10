@@ -61,7 +61,7 @@ function Navbar({ scrollToSection }) {
           />
           <circle cx="50" cy="70" r="5" fill="#61DAFB" />
         </svg>
-        <span className="ml-4 text-lg lg:text-xl font-['Neue_Montreal'] font-semibold text-[#61DAFB]">DevCoders</span>
+        <span className="ml-4 text-lg lg:text-xl font-['Neue_Montreal'] font-bold text-[#61DAFB]">DevCoders</span>
       </Link>
       {!shouldHideMobileMenu && !isMobile && (
         <div className='hidden lg:flex items-center gap-10'>

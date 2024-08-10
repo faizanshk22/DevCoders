@@ -70,7 +70,7 @@ function QuickLinks({ scrollToSection }) {
               <circle cx="50" cy="70" r="5" fill="#61DAFB" />
             </svg>
             {/* DevCoders text */}
-            <div className="text-lg sm:text-3xl font-semibold font-['DM_sans'] text-[#61DAFB]">DevCoders</div>
+            <div className="text-lg sm:text-3xl font-semibold font-['Neue Montreal'] text-[#61DAFB]">DevCoders</div>
           </div>
           {/* DevCoders description */}
           <div className="text-gray-400 text-left text-sm sm:text-xl lg:text-2xl">
