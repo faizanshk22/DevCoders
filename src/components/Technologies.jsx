@@ -120,6 +120,15 @@ function Technologies() {
             animate="pulse"
             whileHover="hover"
           />
+           <motion.img
+            src="/icons/icons8-nodejs-96.png"
+            alt="WordPress"
+            className="w-20 h-20"
+            variants={iconVariants}
+            initial="initial"
+            animate="pulse"
+            whileHover="hover"
+          />
         </div>
       </div>
       {/* <Stats /> */}

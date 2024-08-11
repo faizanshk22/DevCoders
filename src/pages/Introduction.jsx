@@ -1,6 +1,9 @@
 import React from 'react';
+import { FaCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
+import '../components/Landing.css';
+
 
 function Introduction() {
   return (
@@ -17,7 +20,7 @@ function Introduction() {
         <span className="title text-[#61DAFB] text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-20 sm:mt-24 md:mt-32 lg:mt-30">
           ••• Get Started •••
         </span>
-        <div className="text-container font-['Founders_Grotesk_X-Condensed'] text-white text-lg sm:text-2xl md:text-4xl mt-10 px-4 sm:px-8 lg:px-16">
+        <div className="text-container font-['DM_sans'] text-white text-lg sm:text-2xl md:text-4xl mt-10 px-4 sm:px-8 lg:px-16">
           <p>
             <strong className="font-sans">Ready to Transform Your Vision into Reality?</strong><br />
             Embarking on a new project or finding the perfect solution for your business can be both exciting and overwhelming. We're here to make the process smooth and straightforward. Follow these simple steps to get started:
@@ -51,6 +54,22 @@ function Introduction() {
           </p>
         </div>
       </motion.div>
+      <div className='absolute top-[12%] right-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise hidden sm:flex'>
+        <div className='relative w-full h-full flex items-center justify-center'>
+          {[...Array(12)].map((_, i) => (
+            <FaCircle
+              key={i}
+              className='text-white absolute'
+              style={{
+                top: `${50 - 45 * Math.cos((i * 30) * (Math.PI / 180))}%`,
+                left: `${50 + 45 * Math.sin((i * 30) * (Math.PI / 180))}%`,
+                transform: 'translate(-50%, -50%)',
+                fontSize: '8px'
+              }}
+            />
+          ))}
+        </div>
+      </div>
     </div>
     <Footer/>
     </>

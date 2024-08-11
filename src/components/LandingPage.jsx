@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FaCircle } from 'react-icons/fa';
 import Stats from './Stats';
+import './Landing.css';
 
 function LandingPage() {
   const lines = [
@@ -30,11 +32,49 @@ function LandingPage() {
   const textTransition = { duration: 1, ease: 'easeInOut' };
 
   return (
-    <div
-      className='relative w-full h-screen bg-cover bg-center sm:bg-top bg-[#1e1e22] flex flex-col items-center justify-center px-4 custom-bg-position'
-      style={{ backgroundImage: "url('/images/B.jpg')" }}
+    <div 
+      className='relative w-full h-screen bg-black flex flex-col items-center justify-center px-4'
+      style={{
+        backgroundImage: 'url("/images/B.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
-      <div className="text-container flex flex-col items-center text-center w-full mt-[8vh]">
+      {/* Rotating Circle of FaCircle Icons */}
+      <div className='absolute top-[12%] left-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise hidden sm:flex'>
+        <div className='relative w-full h-full flex items-center justify-center'>
+          {[...Array(12)].map((_, i) => (
+            <FaCircle
+              key={i}
+              className='text-white absolute'
+              style={{
+                top: `${50 - 45 * Math.cos((i * 30) * (Math.PI / 180))}%`,
+                left: `${50 + 45 * Math.sin((i * 30) * (Math.PI / 180))}%`,
+                transform: 'translate(-50%, -50%)',
+                fontSize: '8px'
+              }}
+            />
+          ))}
+        </div>
+      </div>
+      <div className='absolute top-[12%] right-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise hidden sm:flex'>
+        <div className='relative w-full h-full flex items-center justify-center'>
+          {[...Array(12)].map((_, i) => (
+            <FaCircle
+              key={i}
+              className='text-white absolute'
+              style={{
+                top: `${50 - 45 * Math.cos((i * 30) * (Math.PI / 180))}%`,
+                left: `${50 + 45 * Math.sin((i * 30) * (Math.PI / 180))}%`,
+                transform: 'translate(-50%, -50%)',
+                fontSize: '8px'
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="text-container flex flex-col items-center text-center w-full mt-[10vh] sm:mt-[12vh]">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -85,6 +125,7 @@ function LandingPage() {
 }
 
 export default LandingPage;
+
 
 
 
