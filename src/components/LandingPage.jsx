@@ -32,99 +32,106 @@ function LandingPage() {
   const textTransition = { duration: 1, ease: 'easeInOut' };
 
   return (
-    <div 
-      className='relative w-full h-screen bg-black flex flex-col items-center justify-center px-4'
-      style={{
-        backgroundImage: 'url("/images/B.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      {/* Rotating Circle of FaCircle Icons */}
-      <div className='absolute top-[12%] left-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise hidden sm:flex'>
-        <div className='relative w-full h-full flex items-center justify-center'>
-          {[...Array(12)].map((_, i) => (
-            <FaCircle
-              key={i}
-              className='text-white absolute'
-              style={{
-                top: `${50 - 45 * Math.cos((i * 30) * (Math.PI / 180))}%`,
-                left: `${50 + 45 * Math.sin((i * 30) * (Math.PI / 180))}%`,
-                transform: 'translate(-50%, -50%)',
-                fontSize: '8px'
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <div className='absolute top-[12%] right-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise hidden sm:flex'>
-        <div className='relative w-full h-full flex items-center justify-center'>
-          {[...Array(12)].map((_, i) => (
-            <FaCircle
-              key={i}
-              className='text-white absolute'
-              style={{
-                top: `${50 - 45 * Math.cos((i * 30) * (Math.PI / 180))}%`,
-                left: `${50 + 45 * Math.sin((i * 30) * (Math.PI / 180))}%`,
-                transform: 'translate(-50%, -50%)',
-                fontSize: '8px'
-              }}
-            />
-          ))}
-        </div>
-      </div>
+    <div className='relative w-full h-screen'>
+      {/* Blurred Background Image */}
+      <div 
+        className='absolute top-0 left-0 w-full h-full bg-cover bg-center'
+        style={{
+          backgroundImage: 'url("/images/B.jpg")',
+          filter: 'blur(4px)',
+          zIndex: -1,
+        }}
+      ></div>
 
-      <div className="text-container flex flex-col items-center text-center w-full mt-[10vh] sm:mt-[12vh]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeIndex}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            variants={textVariants}
-            transition={textTransition}
-            className="text-2xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
-          >
-            {lines[activeIndex] === "SEO for better experience of your business" ? (
-              <>
-                SEO for better experience <br /> of your business
-              </>
-            ) : lines[activeIndex] === "Web Development Solutions & IT Services" ? (
-              <>
-                Web Development Solutions <br /> & IT Services
-              </>
-            ) : lines[activeIndex] === "Mobile Development Solutions and Services" ? (
-              <>
-                Mobile Development Solutions <br /> and Services
-              </>
-            ) : lines[activeIndex] === "DevOps Engineering and Services" ? (
-              <>
-                DevOps Engineering <br /> and Services
-              </>
-            ) : (
-              lines[activeIndex]
-            )}
-          </motion.div>
-        </AnimatePresence>
-        <div className="button-container flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-          <Link to="/introduction">
-            <button className='flex uppercase items-center justify-center gap-2 font-bold sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-lg text-white hover:bg-blue-900 transition duration-300'>
-              Get Started &gt;&gt;
-            </button>
-          </Link>
-          <Link to="/exploreservices">
-            <button className='flex uppercase items-center justify-center gap-2 font-bold sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-lg text-white hover:bg-blue-900 transition duration-300'>
-              Explore Services &gt;&gt;
-            </button>
-          </Link>
+      {/* Content on top of the background */}
+      <div className='relative w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center px-4'>
+        {/* Rotating Circle of FaCircle Icons */}
+        <div className='absolute top-[12%] left-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise hidden sm:flex'>
+          <div className='relative w-full h-full flex items-center justify-center'>
+            {[...Array(12)].map((_, i) => (
+              <FaCircle
+                key={i}
+                className='text-white absolute'
+                style={{
+                  top: `${50 - 45 * Math.cos((i * 30) * (Math.PI / 180))}%`,
+                  left: `${50 + 45 * Math.sin((i * 30) * (Math.PI / 180))}%`,
+                  transform: 'translate(-50%, -50%)',
+                  fontSize: '8px'
+                }}
+              />
+            ))}
+          </div>
         </div>
+        <div className='absolute top-[12%] right-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise hidden sm:flex'>
+          <div className='relative w-full h-full flex items-center justify-center'>
+            {[...Array(12)].map((_, i) => (
+              <FaCircle
+                key={i}
+                className='text-white absolute'
+                style={{
+                  top: `${50 - 45 * Math.cos((i * 30) * (Math.PI / 180))}%`,
+                  left: `${50 + 45 * Math.sin((i * 30) * (Math.PI / 180))}%`,
+                  transform: 'translate(-50%, -50%)',
+                  fontSize: '8px'
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="text-container flex flex-col items-center text-center w-full mt-[10vh] sm:mt-[12vh]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              variants={textVariants}
+              transition={textTransition}
+              className="text-2xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
+            >
+              {lines[activeIndex] === "SEO for better experience of your business" ? (
+                <>
+                  SEO for better experience <br /> of your business
+                </>
+              ) : lines[activeIndex] === "Web Development Solutions & IT Services" ? (
+                <>
+                  Web Development Solutions <br /> & IT Services
+                </>
+              ) : lines[activeIndex] === "Mobile Development Solutions and Services" ? (
+                <>
+                  Mobile Development Solutions <br /> and Services
+                </>
+              ) : lines[activeIndex] === "DevOps Engineering and Services" ? (
+                <>
+                  DevOps Engineering <br /> and Services
+                </>
+              ) : (
+                lines[activeIndex]
+              )}
+            </motion.div>
+          </AnimatePresence>
+          <div className="button-container flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <Link to="/introduction">
+              <button className='flex uppercase items-center justify-center gap-2 font-bold sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-lg text-white hover:bg-blue-900 transition duration-300'>
+                Get Started &gt;&gt;
+              </button>
+            </Link>
+            <Link to="/exploreservices">
+              <button className='flex uppercase items-center justify-center gap-2 font-bold sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-lg text-white hover:bg-blue-900 transition duration-300'>
+                Explore Services &gt;&gt;
+              </button>
+            </Link>
+          </div>
+        </div>
+        <Stats />
       </div>
-      <Stats />
     </div>
   );
 }
 
 export default LandingPage;
+
 
 
 
