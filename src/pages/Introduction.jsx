@@ -18,7 +18,7 @@ function Introduction() {
         style={{ backgroundColor: '#1e1e22' }} // Ensure background color is set
       >
         <span className="title text-[#61DAFB] text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-20 sm:mt-24 md:mt-32 lg:mt-30">
-          ••• Get Started •••
+          ••• Book a free consultation •••
         </span>
         <div className="text-container font-['DM_sans'] text-white text-lg sm:text-2xl md:text-4xl mt-10 px-4 sm:px-8 lg:px-16">
           <p>

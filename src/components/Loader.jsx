@@ -4,7 +4,8 @@ import Loader from '/loader.png';
 
 function Preloader() {
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-[#1e1e22] z-50">
+    //bg-[#1e1e22]
+    <div className="fixed inset-0 flex justify-center items-center bg-[#000] z-50">
       <motion.div
         animate={{ rotate: [0, 180] }}
         transition={{

@@ -38,7 +38,7 @@ function LandingPage() {
         className='absolute top-0 left-0 w-full h-full bg-cover bg-center'
         style={{
           backgroundImage: 'url("/images/B.jpg")',
-          filter: 'blur(4px)',
+          filter: 'blur(2px)',
           zIndex: -1,
         }}
       ></div>
