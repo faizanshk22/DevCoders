@@ -20,6 +20,8 @@ import Mobile from './components/LinkPages/Mobile';
 import Seo from './components/LinkPages/Seo';
 import DevOps from './components/LinkPages/DevOps';
 import CustomSolution from './components/LinkPages/CustomSolution';
+import whatappLogo from './assets/wlogo.png';
+
 
 function App() {
   const homeRef = useRef(null);
@@ -66,6 +68,7 @@ function App() {
     return <Loader />;
   }
   return (
+    <>
     <Router>
       <Navbar scrollToSection={scrollToSection} />
       <Routes>
@@ -92,6 +95,12 @@ function App() {
         <Route path="/CustomSolutions" element={<CustomSolution />} />
       </Routes>
     </Router>
+    <div className="fixed bottom-4 right-2 p-4 z-[1001]">
+  <a href="https://wa.me/923244282516?text=Hello How can I help you?" target="_blank">
+    <img src={whatappLogo} className="w-[60px]" alt="w/a" />
+  </a>
+</div>
+    </>
   );
 }
 
