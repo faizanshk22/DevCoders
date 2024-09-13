@@ -71,7 +71,7 @@ function Contact() {
               <img width="48" height="48" src="https://img.icons8.com/color/48/phone.png" alt="phone"/>
               <p className="text-blue-500 text-xl lg:text-2xl">Phone</p>
             </div>
-            <p className="text-white text-sm lg:text-base">+92 3244282516</p>
+            <p className="text-white text-sm lg:text-base">+92 3244282516 <br/> +92 3114518787</p>
           </div>
         </motion.div>
 
