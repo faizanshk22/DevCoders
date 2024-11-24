@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 function Contact() {
   const form = useRef();
   const [status, setStatus] = useState('');
+  const [errors, setErrors] = useState({ name: '', email: '', message: '' });
   const controls = useAnimation();
   const contactRef = useRef(null);
 
@@ -31,8 +32,35 @@ function Contact() {
     };
   }, [controls]);
 
+  const validateForm = () => {
+    let formIsValid = true;
+    const newErrors = { name: '', email: '', message: '' };
+
+    if (!form.current.from_name.value) {
+      newErrors.name = 'Name is required';
+      formIsValid = false;
+    }
+
+    if (!form.current.from_email.value) {
+      newErrors.email = 'Email is required';
+      formIsValid = false;
+    }
+
+    if (!form.current.message.value) {
+      newErrors.message = 'Message is required';
+      formIsValid = false;
+    }
+
+    setErrors(newErrors);
+    return formIsValid;
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -114,11 +142,28 @@ function Contact() {
       >
         <form ref={form} onSubmit={sendEmail} className='bg-white p-6 rounded-lg w-full max-w-lg mx-auto'>
           <label className='block mb-2'>Name</label>
-          <input type="text" name="from_name" className='border border-gray-300 p-2 mb-4 w-full' />
+          <input 
+            type="text" 
+            name="from_name" 
+            className={`border border-gray-300 p-2 mb-2 w-full ${errors.name ? 'border-red-500' : ''}`} 
+          />
+          {errors.name && <p className="text-red-500 text-sm mb-2">{errors.name}</p>}
+          
           <label className='block mb-2'>Email</label>
-          <input type="email" name="from_email" className='border border-gray-300 p-2 mb-4 w-full' />
+          <input 
+            type="email" 
+            name="from_email" 
+            className={`border border-gray-300 p-2 mb-2 w-full ${errors.email ? 'border-red-500' : ''}`} 
+          />
+          {errors.email && <p className="text-red-500 text-sm mb-2">{errors.email}</p>}
+          
           <label className='block mb-2'>Message</label>
-          <textarea name="message" className='border border-gray-300 p-2 mb-4 w-full'></textarea>
+          <textarea 
+            name="message" 
+            className={`border border-gray-300 p-2 mb-2 w-full ${errors.message ? 'border-red-500' : ''}`} 
+          />
+          {errors.message && <p className="text-red-500 text-sm mb-4">{errors.message}</p>}
+          
           <input type="submit" value="Send" className='bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer w-full' />
         </form>
       </motion.div>
