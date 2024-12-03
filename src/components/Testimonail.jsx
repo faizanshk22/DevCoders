@@ -21,7 +21,7 @@ function Testimonial() {
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <div className='testimonials bg-gray-300 py-12'>
+    <div className='testimonials bg-blue-100 py-12'>
       <motion.div
         ref={ref}
         className='container mx-auto'
@@ -31,10 +31,9 @@ function Testimonial() {
       >
         <div className='flex flex-col lg:flex-row lg:items-center'>
           <div className='lg:w-1/2 mb-8 lg:mb-0 font-["DM_sans"] text-center lg:text-left'>
-            <h3 className='text-2xl font-bold mb-4'>Testimonials</h3>
-            <p className='text-lg'>
-              Appreciation from our passionate & satisfied clients.
-            </p>
+            <h3 className='text-2xl font-sans font-bold mb-2'>Client <span className='text-blue-800'>Testimonials</span></h3>
+            <p className='text-lg font-sans'>
+            The outstanding success stories of organizations that rely on <span className='text-blue-800'>DevCoders</span> </p>
           </div>
           <div className='lg:w-1/2'>
             <Swiper
