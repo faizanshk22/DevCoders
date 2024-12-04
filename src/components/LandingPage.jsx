@@ -9,7 +9,7 @@ function LandingPage() {
   const lines = [
     <span> <span className='text-blue-600'>Web Development </span>Solutions & IT Services</span>,
     <span><span className='text-green-700'>Mobile Development</span> Solutions and Services</span>,
-    <span><span className='text-orange-600'>SEO </span>for better experience of your business</span>,
+    <span><span className='text-orange-600'>SEO </span>for your business</span>,
     <span><span className='text-red-700'>DevOps </span>Engineering and Services</span>
   ];
 
