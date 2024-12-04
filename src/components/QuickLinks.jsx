@@ -33,7 +33,7 @@ function QuickLinks({ scrollToSection }) {
   }, [controls]);
 //bg-[#1e1e22]
   return (
-    <div className='w-full h-[60vh] bg-[#000]  flex flex-col justify-center items-center'>
+    <div className='w-full h-[70vh] bg-[#000]  flex flex-col justify-center items-center'>
       <motion.div 
           ref={quickLinksRef}
           variants={slideIn} 
@@ -103,7 +103,7 @@ function QuickLinks({ scrollToSection }) {
           {/* Quick Links section */}
           <div className="text-lg sm:text-3xl font-semibold font-['DM_sans'] text-white mb-2 -ml-[6vw]">Quick Links</div>
           {/* Links */}
-          <div className="text-gray-500 text-sm sm:text-xl lg:text-2xl mb-6">
+          <div className="text-gray-500 text-sm sm:text-xl lg:text-2xl">
             <ul className="list-disc pl-6 sm:pl-8 cursor-pointer">
               <li><span onClick={() => scrollToSection('features')}>To Know Our Web Features</span></li>
               <li><span onClick={() => scrollToSection('services')}>Our Solution and Services</span></li>
