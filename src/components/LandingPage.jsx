@@ -88,7 +88,7 @@ function LandingPage() {
               exit="exit"
               variants={textVariants}
               transition={textTransition}
-              className="text-6xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
+              className="text-4xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
             >
               {lines[activeIndex] === "SEO for better experience of your business" ? (
                 <>
