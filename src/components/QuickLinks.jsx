@@ -92,7 +92,7 @@ function QuickLinks({ scrollToSection }) {
             <a href="https://www.linkedin.com/in/faizansheikh5/" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
               <FaLinkedin />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
+            <a href="https://www.instagram.com/devcoders.incorp?igsh=MXh1bnBrdHpjMjR3dQ==" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
               <FaInstagram />
             </a>
           </div>

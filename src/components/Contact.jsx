@@ -96,7 +96,7 @@ function Contact() {
   };
 
   return (
-    <div ref={contactRef} className='w-full min-h-screen bg-[#2a2a2e] flex flex-col lg:flex-row justify-between px-6 lg:px-20 py-8'>
+    <div ref={contactRef} className='w-full  bg-[#2a2a2e] flex flex-col lg:flex-row justify-between px-6 lg:px-20 py-8'>
       {/* Left Side */}
       <motion.div 
         initial='hidden' 
