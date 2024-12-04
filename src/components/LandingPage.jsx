@@ -79,7 +79,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div className="text-container flex flex-col items-center text-center w-full mt-[16vh] sm:mt-[16vh]">
+        <div className="text-container flex flex-col items-center text-center w-full mt-[18vh] sm:mt-[18vh]">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -88,7 +88,7 @@ function LandingPage() {
               exit="exit"
               variants={textVariants}
               transition={textTransition}
-              className="text-4xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
+              className="text-3xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
             >
               {lines[activeIndex] === "SEO for better experience of your business" ? (
                 <>
