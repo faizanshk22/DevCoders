@@ -40,7 +40,7 @@ function Services() {
         variants={slideIn}
         initial='hidden'
         animate={controls}
-        className='title text-[#61DAFB] text-2xl mt-20 sm:mt-[10vh]'
+        className='title text-[#61DAFB] text-2xl mt-10 sm:mt-[6vh]'
       >
         ••• Our Services •••
       </motion.span>
@@ -48,11 +48,11 @@ function Services() {
         variants={slideIn}
         initial='hidden'
         animate={controls}
-        className='mt-20 sm:mt-[10vh] sub-title font-["Founders_Grotesk_X-Condensed"] text-white text-4xl sm:text-8xl mb-4'
+        className='mt-8 sm:mt-[6vh] sub-title font-["Founders_Grotesk_X-Condensed"] text-white text-4xl sm:text-8xl mb-4'
       >
         Our Expertise
       </motion.span>
-      <div className='sm:mt-10 flex flex-wrap justify-center gap-5 sm:gap-10 p-4 rounded-lg transition duration-300'>
+      <div className='sm:mt-10 mb-8 flex flex-wrap justify-center gap-5 sm:gap-10 p-4 rounded-lg transition duration-300'>
         <Link to="/Web">
           <ServiceCard controls={controls} icon="/icons/programming.png" alt="Programming" title="Web Application Development" />
         </Link>

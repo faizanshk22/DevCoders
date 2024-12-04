@@ -42,7 +42,7 @@ function Contact() {
 
   return (
     <>
-      <div className='w-full min-h-[100vh] bg-[#2a2a2e] flex flex-col lg:flex-row justify-between py-20'>
+      <div className='w-full min-h-[90vh] bg-[#2a2a2e] flex flex-col lg:flex-row justify-between py-20'>
         {/* Left Side */}
         <motion.div  initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}

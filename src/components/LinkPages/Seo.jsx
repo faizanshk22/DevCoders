@@ -1,10 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Contact from '../Contact';
 
 function Seo() {
   return (
-    <>
     <div className="w-full min-h-screen bg-[#1e1e22] flex flex-col items-center py-10">
       <motion.span 
         initial={{ opacity: 0, x: -100 }} 
@@ -32,8 +30,6 @@ function Seo() {
         </div>
       </motion.div>
     </div>
-    <Contact/>
-    </>
   );
 }
 

@@ -21,6 +21,7 @@ function Testimonial() {
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
+    <div className='bg-[#000]'>
     <div className='testimonials bg-blue-100 py-12'>
       <motion.div
         ref={ref}
@@ -86,6 +87,7 @@ function Testimonial() {
           </div>
         </div>
       </motion.div>
+    </div>
     </div>
   );
 }

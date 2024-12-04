@@ -33,7 +33,7 @@ function QuickLinks({ scrollToSection }) {
   }, [controls]);
 //bg-[#1e1e22]
   return (
-    <div className='w-full h-screen bg-[#000]  flex flex-col justify-center items-center'>
+    <div className='w-full h-[60vh] bg-[#000]  flex flex-col justify-center items-center'>
       <motion.div 
           ref={quickLinksRef}
           variants={slideIn} 
@@ -42,7 +42,7 @@ function QuickLinks({ scrollToSection }) {
           className='flex flex-col sm:flex-row justify-between items-center max-w-screen-lg w-full px-4 sm:px-8 gap-8 sm:gap-12'>
         {/* Left section with DevCoders and its description */}
         <div className='flex flex-col items-center text-center sm:text-left'>
-          <div className='flex items-center justify-center mb-6 -ml-[16vw]'>
+          <div className='flex items-center justify-center mt-4 mb-2 -ml-[16vw]'>
             {/* Logo */}
             <svg
               width="48"
@@ -85,7 +85,7 @@ function QuickLinks({ scrollToSection }) {
             your organization to new heights.</p>
           </div>
           {/* Social Media Icons */}
-          <div className='flex mt-8 -ml-[18vw] space-x-6'>
+          <div className='flex mt-4 -ml-[18vw] space-x-6'>
             <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
               <FaFacebook />
             </a>
@@ -99,12 +99,12 @@ function QuickLinks({ scrollToSection }) {
         </div>
 
         {/* Right section with Quick Links and its additional text */}
-        <div className='flex flex-col items-center mt-8 sm:mt-0 text-left sm:text-left'>
+        <div className='flex flex-col items-center -mt-4 sm:mt-0 text-left sm:text-left'>
           {/* Quick Links section */}
-          <div className="text-lg sm:text-3xl font-semibold font-['DM_sans'] text-white mb-4 -ml-[6vw]">Quick Links</div>
+          <div className="text-lg sm:text-3xl font-semibold font-['DM_sans'] text-white mb-2 -ml-[6vw]">Quick Links</div>
           {/* Links */}
           <div className="text-gray-500 text-sm sm:text-xl lg:text-2xl">
-            <ul className="list-disc pl-6 sm:pl-8">
+            <ul className="list-disc pl-6 sm:pl-8 cursor-pointer">
               <li><span onClick={() => scrollToSection('features')}>To Know Our Web Features</span></li>
               <li><span onClick={() => scrollToSection('services')}>Our Solution and Services</span></li>
               <li><span onClick={() => scrollToSection('about')}>About Us</span></li>

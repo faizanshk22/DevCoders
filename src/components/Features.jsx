@@ -22,8 +22,8 @@ const bounce = {
 function Features() {
   return (
     <div className='w-full h-full bg-[#2a2a2e] flex flex-col items-center px-4 md:px-10'>
-      <span className='title text-[#61DAFB] text-xl mt-20 text-center'> ••• Key Functionalities ••• </span>
-      <span className='mt-8 md:mt-16 sub-title font-["Founders_Grotesk_X-Condensed"] text-white text-3xl md:text-5xl lg:text-7xl mb-4 text-center'>
+      <span className='title text-[#61DAFB] text-xl mt-10 text-center'> ••• Key Functionalities ••• </span>
+      <span className='mt-6 md:mt-12 sub-title font-["Founders_Grotesk_X-Condensed"] text-white text-3xl md:text-5xl lg:text-7xl mb-2 text-center'>
         The Designing Features of Web
       </span>
       <div className='p-6 md:p-16 rounded-lg flex flex-wrap justify-center gap-3'>

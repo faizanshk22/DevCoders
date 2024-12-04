@@ -7,10 +7,10 @@ import './Landing.css';
 
 function LandingPage() {
   const lines = [
-    "Web Development Solutions & IT Services",
-    "Mobile Development Solutions and Services",
-    "SEO for better experience of your business",
-    "DevOps Engineering and Services"
+    <span> <span className='text-blue-600'>Web Development </span>Solutions & IT Services</span>,
+    <span><span className='text-green-700'>Mobile Development</span> Solutions and Services</span>,
+    <span><span className='text-orange-600'>SEO </span>for better experience of your business</span>,
+    <span><span className='text-red-700'>DevOps </span>Engineering and Services</span>
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -46,7 +46,7 @@ function LandingPage() {
       {/* Content on top of the background */}
       <div className='relative w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center px-4'>
         {/* Rotating Circle of FaCircle Icons */}
-        <div className='absolute top-[12%] left-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise hidden sm:flex'>
+        <div className='absolute top-[12%] left-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise sm:flex'>
           <div className='relative w-full h-full flex items-center justify-center'>
             {[...Array(12)].map((_, i) => (
               <FaCircle
@@ -62,7 +62,7 @@ function LandingPage() {
             ))}
           </div>
         </div>
-        <div className='absolute top-[12%] right-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise hidden sm:flex'>
+        <div className='absolute top-[12%] right-[10%] w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 animate-spin-counterclockwise  sm:flex'>
           <div className='relative w-full h-full flex items-center justify-center'>
             {[...Array(12)].map((_, i) => (
               <FaCircle
@@ -79,7 +79,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div className="text-container flex flex-col items-center text-center w-full mt-[10vh] sm:mt-[12vh]">
+        <div className="text-container flex flex-col items-center text-center w-full mt-[16vh] sm:mt-[16vh]">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -88,11 +88,11 @@ function LandingPage() {
               exit="exit"
               variants={textVariants}
               transition={textTransition}
-              className="text-2xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
+              className="text-6xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
             >
               {lines[activeIndex] === "SEO for better experience of your business" ? (
                 <>
-                  SEO for better experience <br /> of your business
+                 <span> SEO  </span>for better experience <br /> of your business
                 </>
               ) : lines[activeIndex] === "Web Development Solutions & IT Services" ? (
                 <>
