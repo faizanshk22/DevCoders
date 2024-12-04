@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Contact from '../Contact';
 
 function Web() {
   return (
+    <>
     <div className="w-full min-h-screen bg-[#1e1e22] flex flex-col items-center py-13">
       <motion.span
         initial={{ opacity: 0, x: -100 }}
@@ -32,9 +34,12 @@ function Web() {
             alt="Programming"
             className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80"
           />
+         
         </motion.div>
       </div>
     </div>
+    <Contact/>
+    </>
   );
 }
 
