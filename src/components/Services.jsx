@@ -42,16 +42,16 @@ function Services() {
         animate={controls}
         className='title text-[#61DAFB] text-2xl mt-10 sm:mt-[6vh]'
       >
-        ••• Our Services •••
+        ••• Our Expertise •••
       </motion.span>
-      <motion.span
+      {/* <motion.span
         variants={slideIn}
         initial='hidden'
         animate={controls}
         className='mt-8 sm:mt-[6vh] sub-title font-["Founders_Grotesk_X-Condensed"] text-white text-4xl sm:text-8xl mb-4'
       >
-        Our Expertise
-      </motion.span>
+        Our 
+      </motion.span> */}
       <div className='sm:mt-10 mb-8 flex flex-wrap justify-center gap-5 sm:gap-10 p-4 rounded-lg transition duration-300'>
         <Link to="/Web">
           <ServiceCard controls={controls} icon="/icons/programming.png" alt="Programming" title="Web Application Development" />

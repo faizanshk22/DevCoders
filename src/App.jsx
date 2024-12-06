@@ -78,9 +78,9 @@ function App() {
           <div ref={homeRef}><LandingPage /></div>
           <div ref={PerformanceRef}><Performance /></div>          
           <div ref={featuresRef}><Features /></div>
-          <div ref={aboutRef}><About /></div>
           <div ref={technologiesRef}><Technologies /></div>
           <div ref={servicesRef}><Services /></div>
+          <div ref={aboutRef}><About /></div>
           <Testimonail/>
           <div ref={contactsRef}><Contact /></div>
           <QuickLinks scrollToSection={scrollToSection} />
