@@ -7,8 +7,8 @@ import './Landing.css';
 
 function LandingPage() {
   const lines = [
-    <span> <span className='text-blue-600'>Web Development </span>Solutions & IT Services</span>,
-    <span><span className='text-green-700'>Mobile Development</span> Solutions and Services</span>,
+    <span> <span className='text-blue-600'>Web Development </span>Solutions & Services</span>,
+    <span><span className='text-green-700'>Mobile Development</span> Solutions & Services</span>,
     <span><span className='text-orange-600'>SEO </span>for better of your business</span>,
     <span><span className='text-red-700'>DevOps </span>Engineering and Services</span>
   ];
@@ -88,19 +88,19 @@ function LandingPage() {
               exit="exit"
               variants={textVariants}
               transition={textTransition}
-              className="text-4xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
+              className="text-3xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-10"
             >
               {lines[activeIndex] === "SEO for better experience of your business" ? (
                 <>
                  <span> SEO  </span>for better experience <br /> of your business
                 </>
-              ) : lines[activeIndex] === "Web Development Solutions & IT Services" ? (
+              ) : lines[activeIndex] === "Web Development Solutions & Services" ? (
                 <>
-                  Web Development Solutions <br /> & IT Services
+                  Web Development Solutions <br /> & Services
                 </>
-              ) : lines[activeIndex] === "Mobile Development Solutions and Services" ? (
+              ) : lines[activeIndex] === "Mobile Development Solutions & Services" ? (
                 <>
-                  Mobile Development Solutions <br /> and Services
+                  Mobile Development Solutions <br /> & Services
                 </>
               ) : lines[activeIndex] === "DevOps Engineering and Services" ? (
                 <>

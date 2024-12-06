@@ -96,7 +96,8 @@ function Contact() {
   };
 
   return (
-    <div ref={contactRef} className='w-full  bg-[#2a2a2e] flex flex-col lg:flex-row justify-between px-6 lg:px-20 py-8'>
+    <div className="bg-[#000]">
+    <div ref={contactRef} className='w-full  bg-[#2a2a2e] flex flex-col lg:flex-row justify-between px-6 lg:px-20 py-8' style={{  borderRadius: "10%"}}>
       {/* Left Side */}
       <motion.div 
         initial='hidden' 
@@ -174,6 +175,7 @@ function Contact() {
           {status}
         </div>
       )}
+    </div>
     </div>
   );
 }

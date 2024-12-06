@@ -21,6 +21,7 @@ import Seo from './components/LinkPages/Seo';
 import DevOps from './components/LinkPages/DevOps';
 import CustomSolution from './components/LinkPages/CustomSolution';
 import whatappLogo from './assets/wlogo.png';
+import Performance from './components/Performance';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
   const technologiesRef = useRef(null);
   const servicesRef = useRef(null);
   const contactsRef = useRef(null);
+  const PerformanceRef = useRef(null);
 
   const scrollToSection = (section) => {
     switch (section) {
@@ -37,7 +39,7 @@ function App() {
         homeRef.current.scrollIntoView({ behavior: 'smooth' });
         break;
       case 'features':
-        featuresRef.current.scrollIntoView({ behavior: 'smooth' });
+        PerformanceRef.current.scrollIntoView({ behavior: 'smooth' });
         break;
       case 'about':
         aboutRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -74,12 +76,13 @@ function App() {
       <Routes>
         <Route path="/" element={<>
           <div ref={homeRef}><LandingPage /></div>
+          <div ref={PerformanceRef}><Performance /></div>          
           <div ref={featuresRef}><Features /></div>
           <div ref={aboutRef}><About /></div>
           <div ref={technologiesRef}><Technologies /></div>
           <div ref={servicesRef}><Services /></div>
-          <div ref={contactsRef}><Contact /></div>
           <Testimonail/>
+          <div ref={contactsRef}><Contact /></div>
           <QuickLinks scrollToSection={scrollToSection} />
           <Map />
           <Footer />
