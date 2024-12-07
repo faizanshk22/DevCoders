@@ -22,11 +22,11 @@ const bounce = {
 function Features() {
   return (
     <div className='w-full h-full bg-[#000] flex flex-col items-center px-4 md:px-10' >
-      <span className='title text-[#61DAFB] text-2xl mt-10 text-center'> ••• Key Functionalities ••• </span>
+      <span className='title text-[#61DAFB] text-2xl mt-12 sm:mt-[10vh] text-center'> ••• Key Functionalities ••• </span>
       <span className='mt-6 md:mt-12 sub-title font-["Founders_Grotesk_X-Condensed"] text-white text-3xl md:text-5xl lg:text-7xl mb-2 text-center'>
         The Designing Features of Web
       </span>
-      <div className='p-6 md:p-16 rounded-lg flex flex-wrap justify-center gap-3'>
+      <div className='p-6 md:p-16 rounded-lg flex flex-wrap justify-center gap-3 mb-6'>
         <FeatureItem icon={<DiResponsive className='text-2xl md:text-3xl lg:text-5xl' color='#61DAFB' />} text="Responsive Design" />
         <FeatureItem icon={<MdAppSettingsAlt className='text-2xl md:text-3xl lg:text-5xl' color='#61DAFB' />} text="Extensive Configuration" />
         <FeatureItem icon={<GiBullseye className='text-2xl md:text-3xl lg:text-5xl' color='#61DAFB' />} text="Modern Motion Design" />

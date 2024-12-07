@@ -22,6 +22,9 @@ import DevOps from './components/LinkPages/DevOps';
 import CustomSolution from './components/LinkPages/CustomSolution';
 import whatappLogo from './assets/wlogo.png';
 import Performance from './components/Performance';
+import fb from './assets/facebook.png';
+import linkedin from './assets/linkedin.png';
+
 
 
 function App() {
@@ -98,9 +101,15 @@ function App() {
         <Route path="/CustomSolutions" element={<CustomSolution />} />
       </Routes>
     </Router>
-    <div className="fixed bottom-4 right-2 p-4 z-[1001]">
+    <div className="fixed bottom-[40vh] left-2 p-4 z-[1001] flex flex-col items-center space-y-6">
   <a href="https://wa.me/923244282516?text=Hello How can I help you?" target="_blank">
-    <img src={whatappLogo} className="w-[60px]" alt="w/a" />
+    <img src={whatappLogo} className="w-[40px] md:w-[50px] hover:scale-110 transition-transform duration-200 " alt="w/a" />
+  </a>
+  <a href="#" target="_blank">
+    <img src={fb} className="w-[40px] md:w-[50px] hover:scale-110 transition-transform duration-200" alt="w/a" />
+  </a>
+  <a href="#" target="_blank">
+    <img src={linkedin} className="w-[40px] sm:w-[50px] hover:scale-110 transition-transform duration-200" alt="w/a" />
   </a>
 </div>
     </>

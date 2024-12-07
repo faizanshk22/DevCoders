@@ -48,7 +48,7 @@ function About() {
         variants={slideIn}
         initial='hidden'
         animate={inView ? 'visible' : 'hidden'}
-        className='title text-[#61DAFB] text-xl sm:text-2xl mt-10 text-center'
+        className='title text-[#61DAFB] text-xl sm:text-2xl mt-12 sm:mt-[12vh] -mb-4 text-center'
       >
         ••• About Digital Innovations •••
       </motion.span>

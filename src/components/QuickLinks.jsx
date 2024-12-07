@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { motion, useAnimation } from 'framer-motion';
 
 const slideIn = {
@@ -85,7 +85,7 @@ function QuickLinks({ scrollToSection }) {
             your organization to new heights.</p>
           </div>
           {/* Social Media Icons */}
-          <div className='flex mt-4 -ml-[18vw] space-x-6'>
+          <div className='flex mt-4 -ml-[16vw] space-x-6'>
             <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
               <FaFacebook />
             </a>
@@ -94,6 +94,9 @@ function QuickLinks({ scrollToSection }) {
             </a>
             <a href="https://www.instagram.com/devcoders.incorp?igsh=MXh1bnBrdHpjMjR3dQ==" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
               <FaInstagram />
+            </a>
+            <a href="https://www.instagram.com/devcoders.incorp?igsh=MXh1bnBrdHpjMjR3dQ==" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
+              <FaWhatsapp />
             </a>
           </div>
         </div>

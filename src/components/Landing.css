@@ -1,28 +1,46 @@
-@keyframes spin-clockwise {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes spin-counterclockwise {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(-360deg);
-    }
-  }
-  
-  .animate-spin-clockwise {
-    animation: spin-clockwise 8s linear infinite;
-  }
-  
-  .animate-spin-counterclockwise {
-    animation: spin-counterclockwise 8s linear infinite;
-  }
   html {
     scroll-behavior: smooth;
   }
+  /* Moving dots */
+.dot {
+  position: absolute;
+  width: 6px; /* Adjust size */
+  height: 6px;
+  background-color: rgb(255, 248, 248); /* Semi-transparent white */
+  border-radius: 50%;
+  pointer-events: none; /* Prevent interference */
+}
+
+/* Smaller dots for smaller screens */
+@media (max-width: 768px) {
+  .dot {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-spin-clockwise {
+  animation: spin-clockwise 8s linear infinite;
+}
+
+.animate-spin-counterclockwise {
+  animation: spin-counterclockwise 8s linear infinite;
+}

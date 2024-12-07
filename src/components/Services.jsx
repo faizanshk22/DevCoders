@@ -40,7 +40,7 @@ function Services() {
         variants={slideIn}
         initial='hidden'
         animate={controls}
-        className='title text-[#61DAFB] text-2xl mt-10 sm:mt-[6vh]'
+        className='title text-[#61DAFB] text-2xl mt-14 sm:mt-[14vh] mb-4'
       >
         ••• Our Expertise •••
       </motion.span>
