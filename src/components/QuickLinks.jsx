@@ -86,16 +86,16 @@ function QuickLinks({ scrollToSection }) {
           </div>
           {/* Social Media Icons */}
           <div className='flex mt-4 -ml-[16vw] space-x-6'>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-[#0000cd] text-3xl sm:text-4xl">
               <FaFacebook />
             </a>
             <a href="https://www.linkedin.com/in/faizansheikh5/" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
               <FaLinkedin />
             </a>
-            <a href="https://www.instagram.com/devcoders.incorp?igsh=MXh1bnBrdHpjMjR3dQ==" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
+            <a href="https://www.instagram.com/devcoders.incorp?igsh=MXh1bnBrdHpjMjR3dQ==" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-[#ff6347] text-3xl sm:text-4xl">
               <FaInstagram />
             </a>
-            <a href="https://www.instagram.com/devcoders.incorp?igsh=MXh1bnBrdHpjMjR3dQ==" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-blue-500 text-3xl sm:text-4xl">
+            <a href="https://www.instagram.com/devcoders.incorp?igsh=MXh1bnBrdHpjMjR3dQ==" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-[#00ff7f] text-3xl sm:text-4xl">
               <FaWhatsapp />
             </a>
           </div>

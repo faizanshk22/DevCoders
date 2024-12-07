@@ -91,13 +91,17 @@ function Contact() {
   }, [status]);
 
   const slideIn = {
-    hidden: { opacity: 0, y: 100 }, // Start 100px to the bottom
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }, // Animate to the original position
+    hidden: { opacity: 0, x: -100 }, // Start 100px to the bottom
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, // Animate to the original position
+  };
+  const slideInR = {
+    hidden: { opacity: 0, x: 100 }, // Start 100px to the bottom
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, // Animate to the original position
   };
 
   return (
     <div className="bg-[#000]">
-    <div ref={contactRef} className='w-full  bg-[#2a2a2e] flex flex-col lg:flex-row justify-between px-6 lg:px-20 py-8' style={{  borderRadius: "10%"}}>
+    <div ref={contactRef} className='w-full  bg-[#2a2a2e] flex flex-col lg:flex-row justify-between px-6 lg:px-20 py-8 overflow-hidden' style={{  borderRadius: "10%"}}>
       {/* Left Side */}
       <motion.div 
         initial='hidden' 
@@ -138,7 +142,7 @@ function Contact() {
       <motion.div 
         initial='hidden' 
         animate={controls} 
-        variants={slideIn} 
+        variants={slideInR} 
         className='flex justify-center items-center w-full lg:w-1/2'
       >
         <form ref={form} onSubmit={sendEmail} className='bg-white p-6 rounded-lg w-full max-w-lg mx-auto'>
