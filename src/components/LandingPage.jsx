@@ -7,9 +7,9 @@ import './Landing.css';
 function LandingPage() {
   const lines = [
     <span> <span className='text-blue-600'>Web Development </span>Solutions & Services</span>,
-    <span><span className='text-green-700'>Mobile Development</span> Solutions & Services</span>,
-    <span><span className='text-orange-600'>SEO </span>for better of your business</span>,
-    <span><span className='text-red-700'>DevOps </span>Engineering and Services</span>
+    <span><span className='text-teal-500'>Mobile Development</span> Solutions & Services</span>,
+    <span><span className='text-[#bdb76b]'>Seach Engine Optimization </span>for your business</span>,
+    <span><span className='text-[#fa8072]'>DevOps Engineering </span> and Services</span>
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -72,7 +72,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden"> {/* Ensure no horizontal scrolling */}
+    <div className="relative bg-[#000] w-full h-screen overflow-hidden"> {/* Ensure no horizontal scrolling */}
       {/* Moving Dots */}
       {dots.map((dot, i) => (
         <div
@@ -84,16 +84,6 @@ function LandingPage() {
           }}
         ></div>
       ))}
-
-      {/* Blurred Background Image */}
-      <div 
-        className="absolute top-0 left-0 w-full h-full bg-[#000]"
-        style={{
-          backgroundImage: 'url("/images/B.jpg")',
-          filter: 'blur(2px)',
-          zIndex: -1,
-        }}
-      ></div>
 
       {/* Content on top of the background */}
       <div className="relative w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center px-4">
