@@ -2,7 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-
+const slideIn = {
+  hidden: { opacity: 0, x: -100 }, // Start 100px to the bottom
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, // Animate to the original position
+};
 function Services() {
   const controls = useAnimation();
   const servicesRef = useRef(null);
@@ -68,12 +71,14 @@ function Services() {
 
 function ServiceCard({ controls, icon, alt, title }) {
   return (
-    <div
+    <motion.div initial='hidden' 
+    animate={controls} 
+    variants={slideIn} 
       className="flex flex-col items-center w-40 sm:w-60"
     >
       <img src={icon} alt={alt} className="w-24 h-24 sm:w-36 sm:h-36 transition-transform transform hover:scale-125" />
       <span className="text-white mt-2 text-sm sm:text-base font-[Neue-Montreal] font-semibold text-center">{title}</span>
-    </div>
+    </motion.div>
   );
 }
 
