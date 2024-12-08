@@ -8,7 +8,7 @@ function LandingPage() {
   const lines = [
     <span> <span className='text-blue-600'>Web Development </span>Solutions & Services</span>,
     <span><span className='text-teal-500'>Mobile Development</span> Solutions & Services</span>,
-    <span><span className='text-[#bdb76b]'>Seach Engine Optimization </span>for your business</span>,
+    <span><span className='text-[#bdb76b]'>SEO </span>for your business</span>,
     <span><span className='text-[#fa8072]'>DevOps Engineering </span> and Services</span>
   ];
 
