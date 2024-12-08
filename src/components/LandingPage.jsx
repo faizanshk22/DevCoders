@@ -8,8 +8,8 @@ function LandingPage() {
   const lines = [
     <span> <span className='text-blue-600'>Web Development </span>Solutions & Services</span>,
     <span><span className='text-teal-500'>Mobile Development</span> Solutions & Services</span>,
-    <span><span className='text-[#bdb76b]'>SEO </span>for  better of your business</span>,
-    <span><span className='text-[#fa8072]'>DevOps Engineering </span> and Services</span>
+    <span><span className='text-[#bdb76b]'>Search Engine Optimization </span>for  better of your business</span>,
+    <span><span className='text-[#fa8072]'>DevOps Engineering </span>Solutions & Services</span>
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -72,7 +72,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className="relative bg-[#000] w-full h-screen overflow-hidden"> {/* Ensure no horizontal scrolling */}
+    <div className="relative bg-[#000] w-[100vw] md:w-full h-screen overflow-hidden"> {/* Ensure no horizontal scrolling */}
       {/* Moving Dots */}
       {dots.map((dot, i) => (
         <div
@@ -86,8 +86,8 @@ function LandingPage() {
       ))}
 
       {/* Content on top of the background */}
-      <div className="relative w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center px-4">
-        <div className="text-container flex flex-col items-center text-center w-full mt-[10vh] sm:mt-[10vh]">
+      <div className="relative h-full bg-black bg-opacity-50 flex flex-col items-center justify-center px-4">
+        <div className="text-container flex flex-col items-center text-center w-full mt-[10vh] md:mt-[10vh]">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -95,7 +95,7 @@ function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 1, ease: 'easeInOut' }}
-              className="text-md md:text-6xl font-['sans'] text-white mb-14"
+              className="text-2xl md:text-6xl font-['sans'] text-white mb-[10vh] mt-10"
             >
               {lines[activeIndex]}
             </motion.div>
