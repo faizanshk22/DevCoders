@@ -2,8 +2,6 @@ body{
     background: linear-gradient(180deg, #df7296, #23236f);
 
 }
-@media (max-width: 768px) {
-    .your-icons-container {
-      right: 1rem; /* Adjust the right distance for smaller screens */
-    }
+html {
+    scroll-behavior: smooth;
   }

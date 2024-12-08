@@ -18,12 +18,12 @@ const bounce = {
     }
   },
 };
-
+//font-["Founders_Grotesk_X-Condensed"]
 function Features() {
   return (
     <div className='w-full h-full bg-[#000] flex flex-col items-center px-4 md:px-10' >
       <span className='title text-[#61DAFB] text-2xl mt-12 sm:mt-[10vh] text-center'> ••• Key Functionalities ••• </span>
-      <span className='mt-6 md:mt-12 sub-title font-["Founders_Grotesk_X-Condensed"] text-white text-3xl md:text-5xl lg:text-7xl mb-2 text-center'>
+      <span className='mt-6 md:mt-12 sub-title font-["sans"] text-white text-2xl md:text-4xl lg:text-6xl mb-2 text-center'>
         The Designing Features of Web
       </span>
       <div className='p-6 md:p-16 rounded-lg flex flex-wrap justify-center gap-3 mb-6'>

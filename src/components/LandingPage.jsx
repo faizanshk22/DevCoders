@@ -8,7 +8,7 @@ function LandingPage() {
   const lines = [
     <span> <span className='text-blue-600'>Web Development </span>Solutions & Services</span>,
     <span><span className='text-teal-500'>Mobile Development</span> Solutions & Services</span>,
-    <span><span className='text-[#bdb76b]'>SEO </span>for your business</span>,
+    <span><span className='text-[#bdb76b]'>SEO </span>for  better of your business</span>,
     <span><span className='text-[#fa8072]'>DevOps Engineering </span> and Services</span>
   ];
 
@@ -91,11 +91,11 @@ function LandingPage() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 1, ease: 'easeInOut' }}
-              className="text-4xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-8xl font-['Founders_Grotesk_X-Condensed'] text-white mb-14"
+              className="text-md md:text-6xl font-['sans'] text-white mb-14"
             >
               {lines[activeIndex]}
             </motion.div>
