@@ -1,6 +1,6 @@
 body{
     background: linear-gradient(180deg, #df7296, #23236f);
-    overflow: hidden;
+    overflow-x: hidden;
     position: fixed;
 
 }
@@ -10,17 +10,9 @@ body{
 
 @media (max-width:768px) {
     body{
-        overflow: hidden;
+        overflow-x: hidden;
         position: fixed;
-    }
-    .items{
-        position: fixed;
-    }
-}
-@media (max-height:1024) {
-    body{
-        overflow: hidden;
-        position: fixed;
+        overflow-y: scroll;
     }
     .items{
         position: fixed;
@@ -28,16 +20,7 @@ body{
 }
 @media (max-width:390) {
     body{
-        overflow: hidden;
-        position: fixed;
-    }
-    .items{
-        position: fixed;
-    }
-}
-@media (max-height:844) {
-    body{
-        overflow: hidden;
+        overflow-x: hidden;
         position: fixed;
     }
     .items{
@@ -46,16 +29,8 @@ body{
 }
 @media (max-width:414px) {
     body{
-        overflow: hidden;
-        position: fixed;
-    }
-    .items{
-        position: fixed;
-    }
-}
-@media (max-height:896) {
-    body{
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: scroll;
         position: fixed;
     }
     .items{
@@ -64,16 +39,7 @@ body{
 }
 @media (max-width:375) {
     body{
-        overflow: hidden;
-        position: fixed;
-    }
-    .items{
-        position: fixed;
-    }
-}
-@media (max-height:667) {
-    body{
-        overflow: hidden;
+        overflow-x: hidden;
         position: fixed;
     }
     .items{
@@ -82,16 +48,7 @@ body{
 }
 @media (max-width:360px) {
     body{
-        overflow: hidden;
-        position: fixed;
-    }
-    .items{
-        position: fixed;
-    }
-}
-@media (max-height:740) {
-    body{
-        overflow: hidden;
+        overflow-x: hidden;
         position: fixed;
     }
     .items{
@@ -100,16 +57,7 @@ body{
 }
 @media (max-width:412px) {
     body{
-        overflow: hidden;
-        position: fixed;
-    }
-    .items{
-        position: fixed;
-    }
-}
-@media (max-height:915) {
-    body{
-        overflow: hidden;
+        overflow-x: hidden;
         position: fixed;
     }
     .items{
