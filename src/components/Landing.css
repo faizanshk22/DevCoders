@@ -1,3 +1,21 @@
+
+.dot {
+  position: absolute;
+  width: 6px; /* Adjust size */
+  height: 6px;
+  background-color: rgb(255, 248, 248); /* Semi-transparent white */
+  border-radius: 50%;
+  pointer-events: none; /* Prevent interference */
+}
+
+/* Smaller dots for smaller screens */
+@media (max-width: 768px) {
+  .dot {
+    width: 4px;
+    height: 4px;
+  }
+}
+
 @keyframes spin-clockwise {
   from {
     transform: rotate(0deg);
@@ -22,7 +40,4 @@
 
 .animate-spin-counterclockwise {
   animation: spin-counterclockwise 8s linear infinite;
-}
-html {
-  scroll-behavior: smooth;
 }

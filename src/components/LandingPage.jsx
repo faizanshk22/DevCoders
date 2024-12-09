@@ -88,7 +88,7 @@ function LandingPage() {
       {/* Content on top of the background */}
       <div className="relative h-full bg-black bg-opacity-50 flex flex-col items-center justify-center px-4">
         <div className="text-container flex flex-col items-center text-center w-full mt-[10vh] md:mt-[10vh]">
-          {/* <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
               initial={{ opacity: 0, y: -20 }}
@@ -99,7 +99,7 @@ function LandingPage() {
             >
               {lines[activeIndex]}
             </motion.div>
-          </AnimatePresence> */}
+          </AnimatePresence>
           <div className="button-container flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Link to="/introduction">
               <button className="flex uppercase items-center justify-center gap-2 font-bold sm:gap-7 px-6 py-3 sm:px-10 sm:py-6 bg-zinc-900 rounded-lg text-white hover:bg-blue-900 transition duration-300">
