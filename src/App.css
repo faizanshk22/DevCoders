@@ -17,7 +17,25 @@ body{
         position: fixed;
     }
 }
+@media (max-height:1024) {
+    body{
+        overflow: hidden;
+        position: fixed;
+    }
+    .items{
+        position: fixed;
+    }
+}
 @media (max-width:390) {
+    body{
+        overflow: hidden;
+        position: fixed;
+    }
+    .items{
+        position: fixed;
+    }
+}
+@media (max-height:844) {
     body{
         overflow: hidden;
         position: fixed;
@@ -35,7 +53,25 @@ body{
         position: fixed;
     }
 }
+@media (max-height:896) {
+    body{
+        overflow: hidden;
+        position: fixed;
+    }
+    .items{
+        position: fixed;
+    }
+}
 @media (max-width:375) {
+    body{
+        overflow: hidden;
+        position: fixed;
+    }
+    .items{
+        position: fixed;
+    }
+}
+@media (max-height:667) {
     body{
         overflow: hidden;
         position: fixed;
@@ -53,7 +89,25 @@ body{
         position: fixed;
     }
 }
+@media (max-height:740) {
+    body{
+        overflow: hidden;
+        position: fixed;
+    }
+    .items{
+        position: fixed;
+    }
+}
 @media (max-width:412px) {
+    body{
+        overflow: hidden;
+        position: fixed;
+    }
+    .items{
+        position: fixed;
+    }
+}
+@media (max-height:915) {
     body{
         overflow: hidden;
         position: fixed;
