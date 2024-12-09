@@ -94,10 +94,10 @@ function Contact() {
     hidden: { opacity: 0, x: -100 }, // Start 100px to the bottom
     visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, // Animate to the original position
   };
-  const slideInR = {
-    hidden: { opacity: 0, x: 100 }, // Start 100px to the bottom
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, // Animate to the original position
-  };
+  // const slideInR = {
+  //   hidden: { opacity: 0, x: 100 }, // Start 100px to the bottom
+  //   visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, // Animate to the original position
+  // };
 
   return (
     <div className="bg-[#000]">
@@ -142,7 +142,7 @@ function Contact() {
       <motion.div 
         initial='hidden' 
         animate={controls} 
-        variants={slideInR} 
+        variants={slideIn} 
         className='flex justify-center items-center w-full lg:w-1/2'
       >
         <form ref={form} onSubmit={sendEmail} className='bg-white p-6 rounded-lg w-full max-w-lg mx-auto'>

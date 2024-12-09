@@ -33,7 +33,7 @@ function QuickLinks({ scrollToSection }) {
   }, [controls]);
 //bg-[#1e1e22]
   return (
-    <div className='w-full h-[80vh] bg-[#000]  flex flex-col justify-center items-center'>
+    <div className='w-full h-[80vh] bg-[#000] overflow-x-hidden  flex flex-col justify-center items-center'>
       <motion.div 
           ref={quickLinksRef}
           variants={slideIn} 
