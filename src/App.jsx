@@ -102,7 +102,7 @@ function App() {
         <Route path="/CustomSolutions" element={<CustomSolution />} />
       </Routes>
     </Router>
-    <div className="items fixed bottom-[30vh] -left-2 p-4 z-[1001] flex flex-col items-center space-y-6">
+    <div className="fixed bottom-[30vh] -left-2 p-4 z-[1001] flex flex-col items-center space-y-6">
   <a href="https://wa.me/923244282516?text=Hello How can I help you?" target="_blank">
     <img src={whatappLogo} className="w-[30px] md:w-[50px] hover:scale-110 transition-transform duration-200 " alt="w/a" />
   </a>
