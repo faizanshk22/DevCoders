@@ -72,7 +72,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className="relative bg-[#000] w-[100vw] md:w-full h-screen overflow-hidden"> {/* Ensure no horizontal scrolling */}
+    <div className="relative bg-[#000] overflow-x-hidden overflow-y-hidden w-[100vw] md:w-full h-screen overflow-hidden"> {/* Ensure no horizontal scrolling */}
       {/* Moving Dots */}
       {dots.map((dot, i) => (
         <div

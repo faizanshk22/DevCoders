@@ -110,10 +110,10 @@ function App() {
     <img src={fb} className="w-[30px] md:w-[50px] hover:scale-110 transition-transform duration-200" alt="w/a" />
   </a>
   <a href="#" target="_blank">
-    <img src={linkedin} className="w-[30px] sm:w-[50px] hover:scale-110 transition-transform duration-200" alt="w/a" />
+    <img src={linkedin} className="w-[30px] md:w-[50px] hover:scale-110 transition-transform duration-200" alt="w/a" />
   </a>
   <a href="#" target="_blank">
-    <img src={instagram} className="w-[30px] sm:w-[50px] hover:scale-110 transition-transform duration-200" alt="w/a" />
+    <img src={instagram} className="w-[30px] md:w-[50px] hover:scale-110 transition-transform duration-200" alt="w/a" />
   </a>
 </div>
     </>
