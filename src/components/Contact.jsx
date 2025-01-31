@@ -110,9 +110,9 @@ function Contact() {
         className='flex flex-col justify-center items-start lg:ml-20 mb-8 lg:mb-0 w-full lg:w-1/2'
       >
         <div className='mb-10'>
-          <span className='title text-[#61DAFB] text-2xl'> ••• Contact Us ••• </span>
+          <span className='title text-[#61DAFB] text-3xl'> ••• Get in Touch ••• </span>
           <p className='text-white mt-10 text-lg sm:text-xl md:text-2xl lg:text-4xl font-["DM_sans"]'>
-            Got a project in mind? Don't hesitate to reach out to us!
+            Lets Talk About Your Business Growth With Our Services
           </p>
         </div>
         <div className='border border-gray-300 p-4 mb-4 w-full'>
@@ -145,31 +145,31 @@ function Contact() {
         variants={slideIn} 
         className='flex justify-center items-center w-full lg:w-1/2'
       >
-        <form ref={form} onSubmit={sendEmail} className='bg-white p-6 rounded-lg w-full max-w-lg mx-auto'>
-          <label className='block mb-2'>Name</label>
+        <form ref={form} onSubmit={sendEmail} className='bg-[#87ceeb] p-6 rounded-lg w-full max-w-lg mx-auto'>
+          <label className='block mb-2 font-semibold'>Name</label>
           <input 
             type="text" 
             name="from_name" 
-            className={`border border-gray-300 p-2 mb-2 w-full ${errors.name ? 'border-red-500' : ''}`} 
+            className={`border border-gray-300 rounded-lg p-2 mb-2 w-full ${errors.name ? 'border-red-500' : ''}`} 
           />
           {errors.name && <p className="text-red-500 text-sm mb-2">{errors.name}</p>}
           
-          <label className='block mb-2'>Email</label>
+          <label className='block mb-2 font-semibold'>Email</label>
           <input 
             type="email" 
             name="from_email" 
-            className={`border border-gray-300 p-2 mb-2 w-full ${errors.email ? 'border-red-500' : ''}`} 
+            className={`border border-gray-300 rounded-lg p-2 mb-2 w-full ${errors.email ? 'border-red-500' : ''}`} 
           />
           {errors.email && <p className="text-red-500 text-sm mb-2">{errors.email}</p>}
           
-          <label className='block mb-2'>Message</label>
+          <label className='block mb-2 font-semibold'>Message</label>
           <textarea 
             name="message" 
-            className={`border border-gray-300 p-2 mb-2 w-full ${errors.message ? 'border-red-500' : ''}`} 
+            className={`border border-gray-300 rounded-lg p-2 mb-2 w-full ${errors.message ? 'border-red-500' : ''}`} 
           />
           {errors.message && <p className="text-red-500 text-sm mb-4">{errors.message}</p>}
           
-          <input type="submit" value="Send" className='bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer w-full' />
+          <input type="submit" value="Send" className='bg-blue-900 hover:bg-blue-500 transition duration:200 text-white font-bold py-2 px-4 rounded cursor-pointer w-full' />
         </form>
       </motion.div>
 

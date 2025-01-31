@@ -32,8 +32,8 @@ function Stats() {
             <div className='flex flex-wrap gap-4 max-w-[80vw] mx-auto xl:max-w-none'>
                 {stats.map((item, index) => (
                     <div 
-                        className='flex-1 flex gap-3 items-center justify-center xl:justify-start bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full p-3 md:p-4 shadow-lg w-full sm:w-auto sm:max-w-[45%] lg:max-w-[30%]' 
-                        key={index}
+                        className='flex-1 flex gap-3 items-center justify-center xl:justify-start bg-none border  rounded-full p-3 md:p-4 shadow-lg w-full sm:w-auto sm:max-w-[45%] lg:max-w-[30%]' 
+                        key={index}//gradient-to-r from-cyan-500 to-blue-500
                     >
                         {startAnimation && (
                             <CountUp end={item.num} duration={5} delay={2} className='text-2xl sm:text-3xl xl:text-5xl text-white font-extrabold' />

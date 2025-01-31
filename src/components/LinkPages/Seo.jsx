@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function Seo() {
   return (
-    <div className="w-full min-h-screen bg-[#1e1e22] flex flex-col items-center py-10">
+    <div className="w-full min-h-screen bg-[#000] flex flex-col items-center py-10">
       <motion.span 
         initial={{ opacity: 0, x: -100 }} 
         animate={{ opacity: 1, x: 0 }} 

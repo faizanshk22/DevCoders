@@ -26,10 +26,10 @@ function ExploreServices() {
   };
   return (
     <>
-      <div className='explore w-full min-h-screen bg-[#1e1e22] py-10'>
+      <div className='explore w-full min-h-screen bg-[#000] py-10'>
         <div
           className="flex flex-col items-center overflow-hidden"
-          style={{ backgroundColor: '#1e1e22' }} // Ensure background color is set
+          // style={{ backgroundColor: '#1e1e22' }} // Ensure background color is set
         >
           <div className="w-full">
             <Web />

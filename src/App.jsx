@@ -54,9 +54,9 @@ function App() {
       case 'services':
         servicesRef.current.scrollIntoView({ behavior: 'smooth' });
         break;
-      case 'contacts':
-        contactsRef.current.scrollIntoView({ behavior: 'smooth' });
-        break;
+      // case 'contacts':
+      //   contactsRef.current.scrollIntoView({ behavior: 'smooth' });
+      //   break;
       default:
         break;
     }
@@ -86,9 +86,9 @@ function App() {
           <div ref={servicesRef}><Services /></div>
           <div ref={aboutRef}><About /></div>
           <Testimonail/>
-          <div ref={contactsRef}><Contact /></div>
+          {/* <div ref={contactsRef}><Contact /></div> */}
           <QuickLinks scrollToSection={scrollToSection} />
-          <Map />
+          {/* <Map /> */}
           <Footer />
         </>} />
         <Route path="/quote" element={<Quote />} /> 
@@ -102,7 +102,7 @@ function App() {
         <Route path="/CustomSolutions" element={<CustomSolution />} />
       </Routes>
     </Router>
-    <div className="fixed bottom-[30vh] -left-2 p-4 z-[1001] flex flex-col items-center space-y-6">
+    {/* <div className="fixed bottom-[30vh] -left-2 p-4 z-[1001] flex flex-col items-center space-y-6">
   <a href="https://wa.me/923244282516?text=Hello How can I help you?" target="_blank">
     <img src={whatappLogo} className="w-[30px] md:w-[50px] hover:scale-110 transition-transform duration-200 " alt="w/a" />
   </a>
@@ -115,7 +115,7 @@ function App() {
   <a href="#" target="_blank">
     <img src={instagram} className="w-[30px] md:w-[50px] hover:scale-110 transition-transform duration-200" alt="w/a" />
   </a>
-</div>
+</div> */}
     </>
   );
 }
