@@ -32,7 +32,7 @@ function Navbar({ scrollToSection }) {
   ].includes(location.pathname);
 
   return (
-    <div className='fixed z-[999] w-[100vw] md:w-full px-6 py-4 lg:px-20 lg:py-8 bg-black flex justify-between items-center font-bold'>
+    <div className='fixed z-[999] w-[100vw] md:w-full overflow-x-hidden overflow-y-hidden px-6 py-4 lg:px-20 lg:py-8 bg-black flex justify-between items-center font-bold'>
       <Link to="/" className='flex items-center'>
         <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="100" height="100" rx="10" fill="#282C34" />
