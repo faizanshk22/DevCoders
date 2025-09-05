@@ -100,7 +100,7 @@ export default function Performance() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="group bg-gray-200 border border-gray-400 rounded-lg shadow-md p-6 flex items-start transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-gray-100"
+            className="group bg-gray-200 hover:bg-gray-900 hover:text-white border-2 border-dotted border-orange-600 rounded-lg shadow-md p-6 flex items-start transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-gray-100"
           >
             {/* Tick Icon */}
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center mr-4 transition duration-300 group-hover:bg-green-500">
