@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Footer from '../Footer';
 
 function CustomSolution() {
   return (
@@ -18,7 +19,7 @@ function CustomSolution() {
         transition={{ type: 'spring', stiffness: 50 }}
         className="content-container w-full flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 lg:px-20 mt-10 lg:mt-20"
       >
-        <div className="text-container w-full lg:w-1/2 font-['DM_sans'] text-white text-lg sm:text-xl md:text-2xl lg:text mb-5-3xl">
+        <div className="text-container w-full lg:w-1/2 font-['DM_sans'] text-white text-lg sm:text-xl md:text-2xl lg:text mb-5-3xl mb-10">
           Custom enterprise solutions refer to tailored software systems designed to meet the specific needs and requirements of large organizations. Unlike off-the-shelf software, which provides a one-size-fits-all approach, custom solutions are developed to address unique business processes, challenges, and goals. These solutions can encompass a wide range of applications, including customer relationship management (CRM) systems, enterprise resource planning (ERP) systems, supply chain management (SCM) tools, and more. Custom enterprise solutions are built with flexibility and scalability in mind, allowing organizations to adapt the software as their needs evolve. They often involve a thorough analysis of existing workflows and business needs to ensure that the solution integrates seamlessly with other systems and processes within the organization. Development typically involves a collaborative approach between the organization and the software provider to design, build, and implement a solution that enhances operational efficiency, improves data management, and supports strategic decision-making. Key benefits of custom enterprise solutions include the ability to tailor functionality to specific business processes, provide a competitive edge through unique features, and offer scalability to accommodate growth and changing requirements. Additionally, these solutions often include robust support and maintenance services to ensure continued performance and address any issues that arise. Custom enterprise solutions ultimately enable organizations to streamline operations, enhance productivity, and achieve their strategic objectives more effectively.
         </div>
         <div className="icon-container w-full lg:w-1/2 flex items-center justify-center mt-10 lg:mt-0">
@@ -29,6 +30,7 @@ function CustomSolution() {
           />
         </div>
       </motion.div>
+      <Footer />
     </div>
   );
 }

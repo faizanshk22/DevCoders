@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Footer from '../Footer';
 
 function Mobile() {
   return (
@@ -18,7 +19,7 @@ function Mobile() {
         transition={{ type: 'spring', stiffness: 50 }}
         className="content-container w-full flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 lg:px-20 mt-10 lg:mt-20"
       >
-        <div className="text-container w-full lg:w-1/2 font-['DM_sans'] text-white text-lg sm:text-xl mb-5 md:text-2xl lg:text-3xl">
+        <div className="text-container w-full lg:w-1/2 font-['DM_sans'] text-white text-lg sm:text-xl mb-5 md:text-2xl lg:text-3xl md:mb-10">
           Mobile app development services offer a comprehensive range of solutions designed to create, maintain, and optimize applications for mobile devices. These services typically include custom mobile app development, where developers build tailored applications to meet specific business goals and user needs. The process begins with detailed planning and design, focusing on creating intuitive, user-friendly interfaces and seamless experiences across various mobile platforms. Mobile app development encompasses both native and cross-platform development, utilizing technologies such as Swift for iOS, Kotlin for Android, and frameworks like React Native or Flutter for building apps that work on multiple platforms from a single codebase. Additionally, these services cover backend integration, API development, and cloud-based solutions to ensure robust functionality and scalability. Quality assurance and rigorous testing are integral to ensure the app performs well under various conditions and devices. Post-launch support and maintenance are also crucial, addressing updates, bug fixes, and performance enhancements. Mobile app development services play a pivotal role in helping businesses reach their customers through innovative, reliable, and engaging mobile applications tailored to their specific needs.
         </div>
         <div className="icon-container w-full lg:w-1/2 flex items-center justify-center mb-5 mt-10 lg:mt-0">
@@ -29,6 +30,7 @@ function Mobile() {
           />
         </div>
       </motion.div>
+      <Footer/>
     </div>
   );
 }
