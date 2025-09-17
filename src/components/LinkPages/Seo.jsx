@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 
 function Seo() {
   return (
@@ -30,7 +30,7 @@ function Seo() {
           />
         </div>
       </motion.div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

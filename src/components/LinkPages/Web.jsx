@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 
 function Web() {
   return (
@@ -36,7 +36,7 @@ function Web() {
           />
         </motion.div>
       </div>
-               <Footer />
+               {/* <Footer /> */}
 
     </div>
   );

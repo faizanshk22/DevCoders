@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 function DevOps() {
   return (
     <div className="w-full min-h-screen bg-[#000] flex flex-col items-center py-10">
@@ -29,7 +29,7 @@ function DevOps() {
           />
         </div>
       </motion.div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
