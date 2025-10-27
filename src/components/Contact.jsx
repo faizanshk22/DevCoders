@@ -127,7 +127,7 @@ function Contact() {
             <img width="48" height="48" src="https://img.icons8.com/color/48/new-post.png" alt="new-post"/>
             <p className="text-blue-500 text-lg lg:text-xl ml-4">Email</p>
           </div>
-          <p className="text-white text-sm lg:text-base">info.devcoders@gmail.com</p>
+          <p className="text-white text-sm lg:text-base">hr.devcoders-inc@hotmail.com</p>
         </div>
         <div className='border border-gray-300 p-4 mb-4 w-full'>
           <div className='flex items-center mb-2'>
